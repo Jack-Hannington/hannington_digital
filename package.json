@@ -6,7 +6,7 @@
   "scripts": {
     "start": "sergey",
     "dev": "sergey --watch"
-},
+  },
   "author": "Jack Hannington",
   "license": "ISC",
   "dependencies": {
