@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --grey-blue: #194B67;
+}
+
 body {
     height:100vh;
     background-repeat: no-repeat;
@@ -9,6 +13,7 @@ body {
     font-family: 'Epilogue', sans-serif;
     padding:10px;
     background-color: #F6FAFF;
+    padding-bottom: 1000px;
 }
 
 nav {
@@ -26,17 +31,24 @@ nav {
     padding:80px 0px;
 }
 
-nav > p {
-    letter-spacing: 3px;
-    font-weight: lighter;
+nav > a {
+    letter-spacing: 2px;
+    font-size: 14px;
+    color:var(--grey-blue);
 }
 
-button {
-    padding: 4px 14px;
-    height:30px;
-    border-radius: 0px;
-    letter-spacing: 2px;
-    border:1px solid #ededed;
+h1, h2, h3, h4, h5, h6 {
+    font-family: Karla;
+    letter-spacing:-1px;
+    font-weight: 800;
+}
+
+a {
+    font-family: Epilogue;
+}
+
+p {
+    font-family: Inter;
 }
 
 
@@ -55,4 +67,44 @@ button {
 
 .wide-card-body {
     padding:16px;
+}
+
+
+/* floating nav */
+
+
+.floating-nav {
+    position: fixed;
+    bottom:35px;
+    border-radius: 4px;
+    background: #fff;
+    border: 1px solid #EAEAEA;
+    box-shadow: 0px 4px 4px rgba(199, 199, 199, 0.2);
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    font-size: 14px;
+    max-width: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.floating-nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:15px;
+    position: relative;
+    
+    font-weight: 400;
+    color:var(--grey-blue);
+    text-decoration: none;
+
+}
+
+.floating-nav-item  > svg {
+    margin-bottom: 6px;
+    font-size: 30px;
 }
