@@ -4,6 +4,7 @@
 
 :root {
     --grey-blue: #194B67;
+    --max-width: 1000px;
 }
 
 body {
@@ -20,13 +21,16 @@ nav {
     width:100%;
     display: flex;
     justify-content: space-between;
-    max-width: 1000px;
     margin: auto;
     align-items: center;
 }
 
+.max-width {
+    width:var(--max-width);
+    margin:auto;
+}
+
 .row {
-    max-width: 1000px;
     margin:auto;
     padding:80px 0px;
 }
