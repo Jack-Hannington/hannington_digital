@@ -30,6 +30,7 @@ button {
     font-size: 14px;
     display: flex;
     align-items: center;
+    color:#194B67;
 }
 
 button > svg {
@@ -156,3 +157,8 @@ p {
     font-size: 30px;
 }
 
+@media (max-width: 1000px){
+    .wide-card {
+        margin-top: 30px;
+    }
+}
