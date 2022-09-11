@@ -27,10 +27,12 @@ button {
     padding:8px 14px;
     border-radius: 4px;
     border:1px solid #EBEBEB;
-    font-size: 14px;
+    font-size: 16px;
     display: flex;
     align-items: center;
     color:#194B67;
+    max-width: 130px;
+    margin-top: 5px;
 }
 
 button > svg {
@@ -77,6 +79,11 @@ h1, h2, h3, h4, h5, h6 {
     margin-top: 6px;
 }
 
+h3, h4 {
+    font-family: Inter;
+    letter-spacing: normal;
+}
+
 h5 {
     font-family: Epilogue;
     text-transform: uppercase;
@@ -92,6 +99,8 @@ p {
     font-family: Inter;
     margin-bottom: 12px;
     margin-top: 6px;
+    font-weight: 500;
+    font-size: 18px;
 }
 
 
@@ -124,6 +133,10 @@ img{
 
 .wide-card-body {
     padding:16px;
+    height: 190px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
