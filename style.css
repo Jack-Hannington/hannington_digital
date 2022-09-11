@@ -124,16 +124,25 @@ img{
     font-size: 14px;
     display: flex;
     align-items: center;
+    flex-direction: column;
+    align-items: start;
 }
 
 .wide-card-header > svg {
     font-size:40px;
-    margin-right: 15px;
+    margin-bottom: 8px;
+}
+
+.shopify-logo {
+    color:#96B15B;
+}
+
+.wordpress-logo {
+    color:#71ADCD;
 }
 
 .wide-card-body {
     padding:16px;
-    height: 190px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -145,7 +154,7 @@ img{
 
 .floating-nav {
     position: fixed;
-    bottom:35px;
+    bottom:15px;
     border-radius: 4px;
     background: #fff;
     border: 1px solid #a5a5a5;
