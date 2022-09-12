@@ -31,7 +31,7 @@ button {
     display: flex;
     align-items: center;
     color:#194B67;
-    max-width: 130px;
+
     margin-top: 5px;
 }
 
@@ -41,6 +41,7 @@ button > svg {
 
 .light-green-btn {
     background-color: var(--light-green);
+    max-width: 130px;
 }
 
 nav {
@@ -75,7 +76,7 @@ h1, h2, h3, h4, h5, h6 {
     font-family: Karla;
     letter-spacing:-1px;
     font-weight: 800;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     margin-top: 6px;
 }
 
@@ -93,7 +94,23 @@ h5 {
 
 a {
     font-family: Epilogue;
+    text-decoration: none;
 }
+
+
+details {
+    margin-top:20px;
+    margin-bottom: 20px;
+    border:1px solid #d5d5d5;
+    border-radius: 4px;
+    padding:10px;
+    font-size: 18px;
+}
+
+details:hover, button:hover {
+    cursor: pointer;
+}
+
 
 p {
     font-family: Inter;
@@ -146,6 +163,11 @@ img{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+}
+
+.case-study-video {
+    max-width:100%;
+
 }
 
 
@@ -206,4 +228,9 @@ img{
     .wide-card {
         margin-top: 30px;
     }
+}
+
+.active {
+    background: #ededed;
+    font-weight: bold;
 }

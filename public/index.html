@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,25 +9,25 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="style.css" type="text/css" rel="stylesheet">
+    <link href="/style.css" type="text/css" rel="stylesheet">
     <script defer data-domain="hanningtondigital.com" src="https://plausible.io/js/plausible.js"></script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Inter:wght@400;900&family=Karla:wght@600;700;800&family=Montserrat:wght@300;400;500;700;900&display=swap');
         </style>
         <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
+        <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 </head>
 <body>
-    <!-- <h4>HD</h4> -->
 <nav class="max-width">
     <a>HANNINGTON DIGITAL</a> 
 </nav>
 
 <div class="floating-nav">
-    <a href="#" class="floating-nav-item"><span class="iconify" data-icon="fluent:home-16-regular"></span>Home</a>
-    <a href="#" class="floating-nav-item"><span class="iconify" data-icon="bi:folder-check"></span>Work</a>
-    <a href="dice" class="floating-nav-item"><span class="iconify" data-icon="bi:controller"></span>Play</a>
-    <a href="#" class="floating-nav-item"><span class="iconify" data-icon="ci:mail"></span>Contact</a>
+    <a href="/" class="active floating-nav-item" aria-current="page"><span class="iconify" data-icon="fluent:home-16-regular"></span>Home</a>
+    <a href="/work" class="floating-nav-item"><span class="iconify" data-icon="bi:folder-check"></span>Work</a></a>
+    <a href="/play" class="floating-nav-item"><span class="iconify" data-icon="bi:controller"></span>Play</a>
+    <a href="/contact" class="floating-nav-item"><span class="iconify" data-icon="ci:mail"></span>Contact</a>
 </div>
 
 <section class="what-we-do max-width">
@@ -34,7 +35,6 @@
     <div class="row">
         <div class="col-sm-12">
         <h2>Custom theme development</h2>
-        <p>A selection of sites we’ve created.</p>
     </div>
         <div class="col-lg-6 col-sm-12">
     <div class="wide-card">
@@ -42,12 +42,14 @@
             <span class="iconify shopify-logo" data-icon="cib:shopify"></span><p>Beautiful & robust Shopify 2.0 enabled themes. Unique sections with limitless block options.</p>
         </div>
         <div class="wide-card-img">
-            <img alt="invicta's website" src="https://res.cloudinary.com/db2okldfm/image/upload/v1662931151/Hannington%20Digital/ezgif.com-gif-maker_pqmusy.gif">
+            <video class="lazy case-study-video" autoplay loop muted playsinline data-poster="lazy.jpg">
+                <source src="https://hannington.website/INCUS_shopify_theme.mp4" type="video/mp4"></source>
+              </video>
         </div>
         <div class="wide-card-body">
             <h5>Case study</h5>
-            <h3>Invicta Health & Performance</h3>
-            <p>Bespoke reponsive Wordpress theme built from scratch for Cheshire’s premier physiotherapy clinic.</p>
+            <h3>Incus Performance</h3>
+            <p>Performant Shopify theme with 12 bespoke sections and 20+ customisation for maximum flexibility.</p>
             <button class="light-green-btn">See more <span class="iconify" data-icon="charm:arrow-right"></span></button>
         </div>
     </div>
@@ -55,23 +57,22 @@
 <div class="col-lg-6 col-sm-12">
     <div class="wide-card">
         <div class="wide-card-header">
-            <span class="iconify wordpress-logo" data-icon="cib:wordpress"></span><p>Bespoke themes to match your brand and stand out from the competition.</p>
+            <span class="iconify wordpress-logo" data-icon="cib:wordpress"></span><p>Bespoke Wordpress websites to emphasise your business and stand out from the competition.</p>
         </div>
         <div class="wide-card-img">
-            <img alt="invicta's website" src="https://res.cloudinary.com/db2okldfm/image/upload/v1662931151/Hannington%20Digital/ezgif.com-gif-maker_pqmusy.gif">
+            <video class="lazy case-study-video" autoplay loop muted playsinline data-poster="lazy.jpg">
+                <source src="https://hannington.website/invicta_website_recording.mp4" type="video/mp4"></source>
+              </video>
         </div>
         <div class="wide-card-body">
             <h5>Case study</h5>
             <h3>Invicta Health & Performance</h3>
-            <p>Bespoke reponsive Wordpress theme built from scratch for Cheshire’s premier physiotherapy clinic.</p>
+            <p>Reponsive custom built Wordpress template for Cheshire’s premier physiotherapy clinic.</p>
             <button class="light-green-btn">See more <span class="iconify" data-icon="charm:arrow-right"></span></button>
         </div>
     </div>
     </div>
 </div>
-</section>
-<section class="max-width">
-    <h2>Pipeline</h2>
 </section>
   
     
