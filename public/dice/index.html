@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Game</title>
+    <script defer data-domain="roll-or-hold.herokuapp.com" src="https://plausible.io/js/plausible.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Epilogue:wght@300;400;500;600;700;900&family=Inter:wght@300;400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="dice_styles.css">
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+        <header><p>Target Score</p><input id="high-score" type="number" placeholder="Enter score"></header>
+        <div class="players-container">
+            <div class="player-wrapper active" id="player-1">
+                <input type="text" value="Player 1" class="unstyled">
+                <h2 class="scores" id="player-1-score">0</h2>
+            </div>
+            <div class="player-wrapper" id="player-2">
+                <input type="text" value="Player 2" class="unstyled">
+                <h2 class="scores" id="player-2-score">0</h2>
+            </div>
+        </div>
+        <div class="game-board">
+            <div class="current-score-container">
+                <p>Current score:</p>
+                <h1 id="current-score">0</h1>
+            </div>
+       
+            <div class="game-controls">   
+                <button id="roll" class="game-button red-game-button">Roll</button>         
+        <div class="dice-container">
+            <!-- Dice:<h1 id="dice-number">0 </h1> -->
+            <img class="dice-image" src="https://hannington.website/dice-game/bi_dice-6-fill.png">
+            <img class="dice-image dice-image2" src="https://hannington.website/dice-game/bi_dice-6-fill.png">
+            </div>
+           
+            <button id="hold" class="game-button green-game-button">Hold</button></div>
+
+        </div>
+        <div class="bottom-bar">
+            <h4>How to play</h4>
+            <p>Set a target score at the top. Click roll to increase the current score or press hold to bank it. Rolling a 1 resets your current score and switches turns. Click a player's name to change it.</p>
+            <button style="margin-top:10px;" class="game-button" onclick="resetGame()"><span class="iconify" data-icon="system-uicons:reset"></span> Reset Game</button>
+        </div>
+    </div>
+    <script>
+
+
+        //select all elements
+
+        let highScore;
+        const player1Score = document.querySelector('#player-1-score');
+        const player2Score = document.querySelector('#player-2-score');
+        const currentScore = document.querySelector('#current-score');
+        // const diceNumber = document.querySelector('#dice-number');
+        const holdButton = document.querySelector('#hold');
+        const rollButton = document.querySelector('#roll');
+
+        let activeScore = 0;
+        let dice;
+        let activePlayerScore;
+        let activePlayer = player1Score;
+        let diceImage = document.querySelector('.dice-image');
+        let diceImage2 = document.querySelector('.dice-image2');
+        let p1 = document.querySelector('#player-1 ');
+        let p2 = document.querySelector('#player-2 ');
+
+
+
+        //Store the high score
+
+        //generate random number
+
+        highScoreInput = document.querySelector('#high-score');
+
+        highScoreInput.addEventListener('keyup', () => {
+            highScore = highScoreInput.value;
+            console.log(highScore);
+        })
+
+        rollButton.addEventListener('click', function rollDice() {
+            dice = Math.floor(Math.random() * 6) + 1;
+            dice2 = Math.floor(Math.random() * 6) + 1;
+            diceImage.src ="https://hannington.website/dice-game/bi_dice-" + dice + "-fill.png";
+            diceImage2.src ="https://hannington.website/dice-game/bi_dice-" + dice2 + "-fill.png";
+            // diceNumber.textContent = dice; 
+            // Show/Hide dice if == number
+           
+
+
+            if (dice == 1 || dice2 == 1) {
+                activeScore = 0;
+                if (activePlayer == player1Score) {
+                    activePlayer = player2Score;
+                    p2.classList.add('active');
+                    p1.classList.remove('active');
+                } else {
+                    activePlayer = player1Score;
+                    p1.classList.add('active');
+                    p2.classList.remove('active');
+                }
+                //change active score;
+            } else {
+                activeScore += parseInt(dice + dice2);
+            }
+            currentScore.textContent = activeScore;
+            console.log(dice, activeScore);
+            console.log(activePlayer);
+        });
+
+
+        let p1Score;
+        let p2Score;
+
+
+        holdButton.addEventListener('click', function holdScore() {
+            //add current score to active player's score;
+            if (activePlayer == player1Score) {
+                p1Score = activeScore += parseInt(player1Score.textContent);
+                player1Score.textContent = p1Score;
+                activePlayer = player2Score;
+                if (p1Score >= highScore) {
+                    alert('player 1 winner')
+                }
+                console.log(activePlayer);
+                p2.classList.add('active');
+                p1.classList.remove('active');
+            } else {
+                p2Score = activeScore += parseInt(player2Score.textContent);
+                player2Score.textContent = p2Score;
+                activePlayer = player1Score;
+                if (p2Score >= highScore) {
+                    alert('player 2 winner')
+                }
+                p1.classList.add('active');
+                p2.classList.remove('active');
+                console.log(activePlayer);
+            }
+            activeScore = 0;
+            currentScore.textContent = activeScore;
+        });
+
+        
+
+function resetGame(){
+    activeScore = 0;
+    p1Score = 0;
+    p2Score = 0;
+    highScore = 0;
+    dice = 0;
+    currentScore.textContent = 0;
+    player1Score.textContent = 0;
+    player2Score.textContent = 0;
+    highScoreInput.value = 0;
+    diceNumber.textContent = 0;
+}
+
+
+//Add active score to player's score 
+
+
+//Add active class to player after hold
+
+
+    </script>
+</body>
+
+</html>
