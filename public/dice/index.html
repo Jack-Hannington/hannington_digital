@@ -53,6 +53,9 @@
             <button style="margin-top:10px;" class="game-button" onclick="resetGame()"><span class="iconify" data-icon="system-uicons:reset"></span> Reset Game</button>
         </div>
     </div>
+    <footer style="margin:20px auto; text-align: center;">
+        <a href="/play" title="home">Back to Hannington Digital</a>
+    </footer>
     <script>
 
 
@@ -93,11 +96,6 @@
             dice2 = Math.floor(Math.random() * 6) + 1;
             diceImage.src ="https://hannington.website/dice-game/bi_dice-" + dice + "-fill.png";
             diceImage2.src ="https://hannington.website/dice-game/bi_dice-" + dice2 + "-fill.png";
-            // diceNumber.textContent = dice; 
-            // Show/Hide dice if == number
-           
-
-
             if (dice == 1 || dice2 == 1) {
                 activeScore = 0;
                 if (activePlayer == player1Score) {
@@ -130,7 +128,8 @@
                 player1Score.textContent = p1Score;
                 activePlayer = player2Score;
                 if (p1Score >= highScore) {
-                    alert('player 1 winner')
+                    alert('player 1 wins')
+                    resetGame();
                 }
                 console.log(activePlayer);
                 p2.classList.add('active');
@@ -140,7 +139,8 @@
                 player2Score.textContent = p2Score;
                 activePlayer = player1Score;
                 if (p2Score >= highScore) {
-                    alert('player 2 winner')
+                    alert('player 2 wins')
+                    resetGame();
                 }
                 p1.classList.add('active');
                 p2.classList.remove('active');
@@ -156,7 +156,7 @@ function resetGame(){
     activeScore = 0;
     p1Score = 0;
     p2Score = 0;
-    highScore = 0;
+    highScore = " ";
     dice = 0;
     currentScore.textContent = 0;
     player1Score.textContent = 0;

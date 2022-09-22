@@ -18,13 +18,17 @@
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 </head>
 <body>
-<nav class="max-width">
-    <a>HANNINGTON DIGITAL</a> 
-</nav>
-
-<div class="floating-nav">
-    <sergey-link  class="floating-nav-item" to="/"><span class="iconify" data-icon="fluent:home-16-regular"></span>Home</sergey-link>
-    <sergey-link  class="floating-nav-item" to="/work"><span class="iconify" data-icon="bi:folder-check"></span>Work</a></sergey-link>
-    <sergey-link  class="floating-nav-item" to="/play"><span class="iconify" data-icon="bi:controller"></span>Play</sergey-link>
-    <sergey-link  class="floating-nav-item" to="/contact"><span class="iconify" data-icon="ci:mail"></span>Contact</sergey-link>
+<div class="top-bar max-width">
+    <a class="header-logo">HANNINGTON DIGITAL</a> 
+    <div class="top-bar-links">
+        <a href="/"><span class="iconify" data-icon="ant-design:linkedin-outlined"></span></a>
+        <a href="/"><span class="iconify" data-icon="fluent:mail-16-filled"></span></a>
+    </div>
 </div>
+
+<nav class="floating-nav">
+    <sergey-link  class="floating-nav-item" to="/"><span class="iconify" data-icon="fluent:home-16-regular"></span>Home</sergey-link>
+    <sergey-link  class="floating-nav-item" to="/work/"><span class="iconify" data-icon="bi:folder-check"></span>Work</a></sergey-link>
+    <sergey-link  class="floating-nav-item" to="/play/"><span class="iconify" data-icon="bi:controller"></span>Play</sergey-link>
+    <sergey-link  class="floating-nav-item" to="/contact/"><span class="iconify" data-icon="ci:mail"></span>Contact</sergey-link>
+</nav>
