@@ -6,7 +6,7 @@
 :root {
   --darkest-color: #0C121A;
   --dark-color: #111922; 
-  --max-width: 1200px;
+  --max-width: 1000px;
   --default-padding: 10px;
   --main-font: 'Lora', serif;
   --secondary-font: 'Epilogue', sans-serif;
@@ -40,9 +40,6 @@ h1, h2, h3, h4, h5 {
     margin-bottom: 8px;
     margin-top:8px;
     letter-spacing: var(--letter-spacing);
-    background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1668891593/Hannington%20Digital/Line_4_ftwu1j.svg');
-    background-position: center;
-    background-repeat: no-repeat;
 }
 
 header {
@@ -63,8 +60,9 @@ header {
 }
 
 .menu-toggle {
-    height: 40px;
-    width:140px;
+    height: 30px;
+    line-height: 30px;
+    width:100px;
     font-family: var(--secondary-font);
     letter-spacing: var(--letter-spacing);
     color:var(--body-color);
@@ -98,7 +96,7 @@ header {
 
 
 @media (min-width:1000px){
-    .header-content {
+    .max-width {
         max-width: var(--max-width);
     }
 }
@@ -111,6 +109,12 @@ section {
 .section-title {
     margin:auto;
     text-align: center;
+}
+
+.section-title > h2 {
+    background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1668891593/Hannington%20Digital/Line_4_ftwu1j.svg');
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .section-title > .iconify {
