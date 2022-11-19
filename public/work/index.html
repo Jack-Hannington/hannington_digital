@@ -11,27 +11,28 @@
     <link href="/style.css" type="text/css" rel="stylesheet">
     <script defer data-domain="hanningtondigital.com" src="https://plausible.io/js/plausible.js"></script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Inter:wght@400;900&family=Karla:wght@600;700;800&family=Montserrat:wght@300;400;500;700;900&display=swap');
+       @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Inter:wght@400;900&family=Lora:wght@400;500;600;700&display=swap');
         </style>
         <script src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flexboxgrid/6.3.1/flexboxgrid.min.css" type="text/css" >
         <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.3/dist/lazyload.min.js"></script>
 </head>
 <body>
-<div class="top-bar max-width">
-    <a class="header-logo">HANNINGTON DIGITAL</a> 
-    <div class="top-bar-links">
-        <a href="/"><span class="iconify" data-icon="ant-design:linkedin-outlined"></span></a>
-        <a href="/"><span class="iconify" data-icon="fluent:mail-16-filled"></span></a>
+<header>
+   <div class="header-content">
+    <a><img src="https://res.cloudinary.com/db2okldfm/image/upload/v1668888226/Hannington%20Digital/Logo_ushjkv.svg"></a>
+    <button class="menu-toggle">MENU</button>
+    <div class="nav-items">
+      <div class="nav-links-container">
+        <button class="close-menu">X</button>
+        <a>Work</a>
+        <a>About</a>
+        <a>Contact</a>
+      </div>
     </div>
-</div>
+   </div>
+</header>
 
-<nav class="floating-nav">
-    <a href="/" class="active floating-nav-item"><span class="iconify" data-icon="fluent:home-16-regular"></span>Home</a>
-    <a href="/work/" class="active floating-nav-item" aria-current="page"><span class="iconify" data-icon="bi:folder-check"></span>Work</a></a>
-    <a href="/play/" class="floating-nav-item"><span class="iconify" data-icon="bi:controller"></span>Play</a>
-    <a href="/contact/" class="floating-nav-item"><span class="iconify" data-icon="ci:mail"></span>Contact</a>
-</nav>
 
 <section class="max-width">
     <div class="row ">
@@ -61,6 +62,17 @@
 
     <!-- <h3 id="this-is-the-contact-page">This is the contact page</h3>
 <p>Some text to go with the contact page</p> -->
+
+
+<!-- Menu toggle -->
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-items').classList.add('show-nav');
+    })
+    document.querySelector('.close-menu').addEventListener('click', () => {
+        document.querySelector('.nav-items').classList.remove('show-nav');
+    })
+</script>
 </body>
 </html>
 

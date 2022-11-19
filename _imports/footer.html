@@ -1,3 +1,14 @@
     <!-- <sergey-import src="contact" as="markdown" /> -->
+
+
+<!-- Menu toggle -->
+<script>
+    document.querySelector('.menu-toggle').addEventListener('click', () => {
+        document.querySelector('.nav-items').classList.add('show-nav');
+    })
+    document.querySelector('.close-menu').addEventListener('click', () => {
+        document.querySelector('.nav-items').classList.remove('show-nav');
+    })
+</script>
 </body>
 </html>
