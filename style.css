@@ -186,8 +186,11 @@ section {
 .card-header h3 {
     margin-top: 2px;
 }
+.card-image > img {
+    width:100%;
+}
 .card-body {
-    padding:var(--default-padding);
+    padding:26px;
 }
 
 .card-body > button {
@@ -208,7 +211,7 @@ section {
 
 
 
-@media (min-width:1000px){
+@media (min-width:800px){
     .max-width {
         max-width: var(--max-width);
     }
