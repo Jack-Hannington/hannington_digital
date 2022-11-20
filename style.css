@@ -16,6 +16,7 @@
   --smaller-font-size:16px;
   --body-font-weight: 400;
   --letter-spacing: 0.1em;
+  --blue: #5E9DBE;
 }
 
 html {
@@ -63,11 +64,13 @@ img {
 }
 
 button {
-    padding:10px 20px;
+    padding:10px 15px;
     border:none;
     font-family: var(--secondary-font);
     letter-spacing: 1px;
     font-size: 16px;
+    background: var(--heading-color);
+    color:var(--dark-color);
 }
 
 header {
@@ -172,6 +175,7 @@ section {
     flex-direction: column;
     text-align: center;
     border:1px solid #262626;
+    border-radius: 10px;
 }
 
 .card-header {
@@ -199,6 +203,7 @@ section {
 .card-header > .iconify {
     margin-top:-40px;
     font-size: 38px;
+    color:var(--blue);
 }
 
 
