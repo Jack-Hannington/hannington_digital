@@ -1,6 +1,5 @@
 * {
     box-sizing: border-box;
-
 }
 
 :root {
@@ -8,7 +7,7 @@
   --dark-color: #111922; 
   --max-width: 1000px;
   --default-padding: 10px;
-  --main-font: 'Lora', serif;
+  --main-font: 'Inter', sans-serif;
   --secondary-font: 'Epilogue', sans-serif;
   --heading-color: #efefef;
   --body-color: #D4D4D4;
@@ -39,6 +38,8 @@ h1, h2, h3, h4, h5 {
     font-weight: 500;
     margin-bottom: 8px;
     margin-top:8px;
+    font-family: var(--secondary-font);
+    text-transform: uppercase;
     letter-spacing: var(--letter-spacing);
 }
 
@@ -95,10 +96,12 @@ header {
 }
 
 
-@media (min-width:1000px){
-    .max-width {
-        max-width: var(--max-width);
-    }
+/* layouts */
+
+.col-4 {
+  width:100%;
+  outline:1px solid pink;
+  padding:var(--default-padding);
 }
 
 section {
@@ -109,26 +112,57 @@ section {
 .section-title {
     margin:auto;
     text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-content {
+    margin:auto;
 }
 
 .section-title > h2 {
     background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1668891593/Hannington%20Digital/Line_4_ftwu1j.svg');
     background-position: center;
     background-repeat: no-repeat;
+    width: 100%;
 }
 
 .section-title > .iconify {
-    font-size:26px;
+    font-size:24px;
 }
 
-#work {
-    position: relative;
+
+/* card design */
+
+.card-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
 }
 
-.gradient-border{
-    border: 1px solid;
-    border-image-source: linear-gradient(90deg, #E6E6E6 0%, rgba(230, 230, 230, 0) 49.35%, #E6E6E6 97.23%);
-    height: 1px;
-    width: 100%;
-    position: absolute;
+.card {
+    display:flex;
+    justify-content: center;
+
+}
+
+.card-header {
+    background-color: var(--darkest-color);
+    text-align: center;
+    outline:1px solid red;
+    width:100%;
+}
+
+.card-logo {
+    margin-top:-20px;
+}
+
+
+
+@media (min-width:1000px){
+    .max-width {
+        max-width: var(--max-width);
+    }
+    .col-4 {
+        width: 33.3%;
+    }
 }
