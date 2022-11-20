@@ -5,12 +5,12 @@
 :root {
   --darkest-color: #0C121A;
   --dark-color: #111922; 
-  --max-width: 1000px;
+  --max-width: 1200px;
   --default-padding: 10px;
   --main-font: 'Inter', sans-serif;
   --secondary-font: 'Epilogue', sans-serif;
   --heading-color: #efefef;
-  --body-color: #D4D4D4;
+  --body-color: #b0B0B0;
   --body-line-height: 24px;
   --body-font-size: 18px;
   --smaller-font-size:16px;
@@ -43,6 +43,33 @@ h1, h2, h3, h4, h5 {
     letter-spacing: var(--letter-spacing);
 }
 
+h3 {
+    font-size: 14px;
+}
+
+h4 {
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 0px;
+}
+
+p {
+    margin-top:4px;
+    margin-bottom: 4px;
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    padding:10px 20px;
+    border:none;
+    font-family: var(--secondary-font);
+    letter-spacing: 1px;
+    font-size: 16px;
+}
+
 header {
     background-color: var(--dark-color);
     position: sticky;
@@ -62,7 +89,6 @@ header {
 
 .menu-toggle {
     height: 30px;
-    line-height: 30px;
     width:100px;
     font-family: var(--secondary-font);
     letter-spacing: var(--letter-spacing);
@@ -70,6 +96,7 @@ header {
     background-color: var(--darkest-color);
     border:1px solid var(--body-color);
     font-size: var(--smaller-font-size);
+    line-height: 12px;
 }
 
 .nav-items {
@@ -100,7 +127,6 @@ header {
 
 .col-4 {
   width:100%;
-  outline:1px solid pink;
   padding:var(--default-padding);
 }
 
@@ -113,6 +139,7 @@ section {
     margin:auto;
     text-align: center;
     margin-bottom: 60px;
+    padding:var(--default-padding);
 }
 
 .section-content {
@@ -142,18 +169,36 @@ section {
 .card {
     display:flex;
     justify-content: center;
-
+    flex-direction: column;
+    text-align: center;
+    border:1px solid #262626;
 }
 
 .card-header {
-    background-color: var(--darkest-color);
+    background-color: var(--dark-color);
     text-align: center;
-    outline:1px solid red;
     width:100%;
 }
+.card-header h3 {
+    margin-top: 2px;
+}
+.card-body {
+    padding:var(--default-padding);
+}
 
-.card-logo {
-    margin-top:-20px;
+.card-body > button {
+    margin: 8px 0px;
+}
+
+.card-body > p {
+    margin-top:-4px;
+    margin-bottom: 4px;
+    font-size: 16px;
+}
+
+.card-header > .iconify {
+    margin-top:-40px;
+    font-size: 38px;
 }
 
 
