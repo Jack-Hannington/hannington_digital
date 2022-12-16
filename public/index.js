@@ -12,9 +12,13 @@ window.onscroll = function() {
 //   })
 
 
-  window.addEventListener("load", (event) => {
-    document.querySelector('#show-menu').addEventListener('click', () =>{
-        alert('still-working')
-        // document.querySelector('.menu').classList.add('show-menu');
-  })
+  window.addEventListener("DOMContentLoaded", (event) => {
+      function updateMenu(){
+        document.querySelector('#show-menu').addEventListener('click', () =>{
+               let menu = document.querySelector('.menu');
+               menu.classList.toggle('show-menu');
+         })
+      }
+      setTimeout(updateMenu,1000)
+
   });

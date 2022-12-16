@@ -255,6 +255,21 @@ section {
 
 
 
+
+
+#show-menu:hover {
+    cursor: pointer;
+}
+
+.show-menu {
+    display: block;
+    top: 50px;
+    width: 60%;
+    color: white;
+    position: absolute;
+    transition: 0.5s ease-in;
+}
+
 @media (min-width:800px){
     .max-width {
         max-width: var(--max-width);
@@ -263,19 +278,7 @@ section {
     .col-4 {
         width: 33.3%;
     }
-}
-
-#show-menu:hover {
-    cursor: pointer;
-}
-#show-menu:hover > menu {
-    display: block;
-}
-
-.show-menu {
-    display: block;
-    top: 50px;
-    width: 80%;
-    color: white;
-    position: absolute;
+    .show-menu {
+        width:20%;
+    }
 }
