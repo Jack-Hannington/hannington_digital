@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5 {
 
 h3 {
     font-size: 14px;
+    margin-bottom: 0px;
 }
 
 h4 {
@@ -67,14 +68,13 @@ button {
     padding:10px 15px;
     border:none;
     font-family: var(--secondary-font);
-    letter-spacing: 1px;
+    border-radius: 6px;
     font-size: 16px;
     background: var(--heading-color);
     color:var(--dark-color);
 }
 
 header {
-    background-color: var(--dark-color);
     position: sticky;
     position: -webkit-sticky;
     top: 0; /* required */
@@ -82,12 +82,24 @@ header {
     z-index: 1;
 }
 
+.scrolled {
+    background-color: rgba(0, 0, 0, 0.5); /* Set a semi-transparent white background color */
+    -webkit-backdrop-blur: 10px; /* Safari and Chrome */
+    backdrop-blur: 10px; /* Add a 10px blur effect */
+    transition: 0.5s ease-in;
+}
+
+.hannington-digital {
+    letter-spacing: 4px;
+    font-size: 14px;
+}
+
 .header-content {
     margin: auto;
     padding:var(--default-padding);
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
 }
 
 .menu-toggle {
@@ -171,6 +183,7 @@ section {
     background-position: center;
     background-repeat: no-repeat;
     width: 100%;
+    font-size: 20px;
 }
 
 .section-title > .iconify {
@@ -191,12 +204,12 @@ section {
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    border:1px solid #262626;
-    border-radius: 10px;
+    border:1px solid #191818;
 }
 
 .card-header {
     background-color: var(--dark-color);
+    /* padding: 10px 20px; */
     text-align: center;
     width:100%;
 }
@@ -221,7 +234,7 @@ section {
 }
 
 .card-header > .iconify {
-    margin-top:-40px;
+    margin-top:-50px;
     font-size: 38px;
     color:var(--blue);
 }
