@@ -64,6 +64,15 @@ img {
     max-width: 100%;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
 button {
     padding:10px 15px;
     border:none;
@@ -112,6 +121,10 @@ header {
     border:1px solid var(--body-color);
     font-size: var(--smaller-font-size);
     line-height: 12px;
+}
+
+.menu {
+    display: none;
 }
 
 
@@ -163,14 +176,13 @@ header {
 }
 
 section {
-    padding-top:40px;
-    padding-bottom: 40px;
+    padding:40px 20px;
 }
 
 .section-title {
     margin:auto;
     text-align: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     padding:var(--default-padding);
 }
 
@@ -246,8 +258,24 @@ section {
 @media (min-width:800px){
     .max-width {
         max-width: var(--max-width);
+        margin:auto;
     }
     .col-4 {
         width: 33.3%;
     }
+}
+
+#show-menu:hover {
+    cursor: pointer;
+}
+#show-menu:hover > menu {
+    display: block;
+}
+
+.show-menu {
+    display: block;
+    top: 50px;
+    width: 80%;
+    color: white;
+    position: absolute;
 }
