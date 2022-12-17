@@ -23,18 +23,8 @@
     <h1 class="hannington-digital"><a href="/">Hannington Digital </a><span class="iconify" id="show-menu" style="margin-bottom:-2px;" data-icon="ion:chevron-down-outline">   
 </span></h1>
 <div class="menu">
-  <div class="card">
-    <div class="card-body">
-      <a href="/work"><h4>Projects</h4></a></li>
-       <a href="/contact"><h4>About &amp; contact</h4></a></li>
-       
-    </div>
-  </div>
-  <!-- <div class="card" style="margin-top:10px;">
-    <div class="card-body">
-       <a href="/play"><h4>Fun</h4></a></li>
-    </div>
-  </div> -->
+      <a href="/work"><button class="nav-button">Work</button></a>
+       <a href="/contact"><button class="nav-button">About &amp; contact</button></a>
  </div>
   </div>
 </header>
@@ -66,7 +56,36 @@
     </div>
 </section>
 
+<script>
+    window.onscroll = function() {
+    if (document.documentElement.scrollTop > 50) {
+        document.querySelector('header').classList.add('scrolled');
+        document.querySelector('.menu').classList.add('scrolled');
+      } else {
+        document.querySelector('header').classList.remove('scrolled');
+        document.querySelector('.menu').classList.remove('scrolled');
+      }
+  };
 
+
+//  window.onload() document.querySelector('#show-menu').addEventListener('mouseover', () =>{
+//         alert('mouse')
+//   })
+
+
+  window.addEventListener("DOMContentLoaded", (event) => {
+      function updateMenu(){
+        document.querySelector('#show-menu').addEventListener('click', () =>{
+               let menu = document.querySelector('.menu');
+               menu.classList.toggle('show-menu');
+               menu.classList.toggle('scrolled');
+               document.querySelector('header').classList.toggle('scrolled');
+         })
+      }
+      setTimeout(updateMenu,1000)
+
+  });
+</script>
 </body>
 </html>
 
