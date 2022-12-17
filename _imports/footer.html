@@ -1,13 +1,13 @@
 <script>
-    window.onscroll = function() {
-    if (document.documentElement.scrollTop > 50) {
-        document.querySelector('header').classList.add('scrolled');
-        document.querySelector('.menu').classList.add('scrolled');
-      } else {
-        document.querySelector('header').classList.remove('scrolled');
-        document.querySelector('.menu').classList.remove('scrolled');
-      }
-  };
+//     window.onscroll = function() {
+//     if (document.documentElement.scrollTop > 50) {
+//         document.querySelector('header').classList.add('scrolled');
+//         document.querySelector('.menu').classList.add('scrolled');
+//       } else {
+//         document.querySelector('header').classList.remove('scrolled');
+//         document.querySelector('.menu').classList.remove('scrolled');
+//       }
+//   };
 
 
 //  window.onload() document.querySelector('#show-menu').addEventListener('mouseover', () =>{
@@ -20,8 +20,8 @@
         document.querySelector('#show-menu').addEventListener('click', () =>{
                let menu = document.querySelector('.menu');
                menu.classList.toggle('show-menu');
-               menu.classList.toggle('scrolled');
-               document.querySelector('header').classList.toggle('scrolled');
+            //    menu.classList.toggle('scrolled');
+            //    document.querySelector('header').classList.toggle('scrolled');
          })
       }
       setTimeout(updateMenu,1000)

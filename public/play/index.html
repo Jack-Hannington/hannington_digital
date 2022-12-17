@@ -18,11 +18,12 @@
         <script src="index.js" defer></script>
 </head>
 <body>
-<header>
-   <div class="header-content max-width">
-    <h1 class="hannington-digital"><a href="/">Hannington Digital </a><span class="iconify" id="show-menu" style="margin-bottom:-2px;" data-icon="ion:chevron-down-outline">   
+<header class="scrolled">
+   <div class="header-content max-width ">
+    <h1 id="show-menu" class="hannington-digital">Hannington Digital<span class="iconify" style="margin-bottom:-2px;" data-icon="ion:chevron-down-outline">   
 </span></h1>
-<div class="menu">
+<div class="menu scrolled">
+      <a href="/"><button class="nav-button">Home</button></a>
       <a href="/work"><button class="nav-button">Work</button></a>
        <a href="/contact"><button class="nav-button">About &amp; contact</button></a>
  </div>
@@ -80,15 +81,15 @@
 
 
 <script>
-    window.onscroll = function() {
-    if (document.documentElement.scrollTop > 50) {
-        document.querySelector('header').classList.add('scrolled');
-        document.querySelector('.menu').classList.add('scrolled');
-      } else {
-        document.querySelector('header').classList.remove('scrolled');
-        document.querySelector('.menu').classList.remove('scrolled');
-      }
-  };
+//     window.onscroll = function() {
+//     if (document.documentElement.scrollTop > 50) {
+//         document.querySelector('header').classList.add('scrolled');
+//         document.querySelector('.menu').classList.add('scrolled');
+//       } else {
+//         document.querySelector('header').classList.remove('scrolled');
+//         document.querySelector('.menu').classList.remove('scrolled');
+//       }
+//   };
 
 
 //  window.onload() document.querySelector('#show-menu').addEventListener('mouseover', () =>{
@@ -101,8 +102,8 @@
         document.querySelector('#show-menu').addEventListener('click', () =>{
                let menu = document.querySelector('.menu');
                menu.classList.toggle('show-menu');
-               menu.classList.toggle('scrolled');
-               document.querySelector('header').classList.toggle('scrolled');
+            //    menu.classList.toggle('scrolled');
+            //    document.querySelector('header').classList.toggle('scrolled');
          })
       }
       setTimeout(updateMenu,1000)

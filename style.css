@@ -105,7 +105,7 @@ header {
 }
 
 .scrolled {
-    background-color: rgba(0, 0, 0, 0.5); /* Set a semi-transparent white background color */
+    background-color: rgba(0, 0, 0, 0.7); /* Set a semi-transparent white background color */
     backdrop-filter: blur(1px);
 }
 
