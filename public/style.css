@@ -231,6 +231,13 @@ section {
     font-size: 20px;
 }
 
+.modal-body > h3 {
+    background-image: url('https://res.cloudinary.com/db2okldfm/image/upload/v1668891593/Hannington%20Digital/Line_4_ftwu1j.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    margin-top: 20px;
+}
+
 .section-title > .iconify {
     font-size:24px;
 }
@@ -248,7 +255,7 @@ section {
     margin: auto;
 }
 
-.card {
+.card, .modal {
     display:flex;
     justify-content: center;
     flex-direction: column;
@@ -260,9 +267,35 @@ section {
     text-align:center;
 }
 
-.wide-card {
+.wide-card, .modal {
     margin-bottom: 15px;
     width:100%;
+}
+
+.modal {
+    text-align: center;
+    padding:20px;
+}
+
+.modal-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-header > h3 {
+    display: inline;
+    margin-left:14px;
+}
+
+.modal-body > ul {
+    list-style-type: none;
+    margin-block-start: 0px;
+    padding-inline-start: 0px;
+}
+
+.modal-header > img {
+    width:50px;
 }
 
 .card-image {
