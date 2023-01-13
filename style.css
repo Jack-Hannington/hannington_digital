@@ -115,6 +115,7 @@ input {
     font-family: inherit;
     padding:10px 15px;
     border-radius: 6px;
+    font-size: 16px;
 }
 
 .scrolled {
