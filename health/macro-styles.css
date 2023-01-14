@@ -1,0 +1,20 @@
+#macros-icon {
+    font-size:40px;
+}
+
+.macros-card-header{ 
+    display:flex;
+    justify-content: space-between;
+}
+.macros-card-header p {
+    display: inline-block;
+    opacity: 0.5;
+}
+
+#lose-weight {
+    color:rgba(0, 221, 255, 0.9)
+}
+
+#gain-weight {
+    color:rgba(255, 0, 55, 0.9)
+}

@@ -9,6 +9,9 @@ const loseWeight = [
     { id: "fats", kcals: 9, baseline: 0.3 }
 ];
 
+let rangeValue = intensity.value;
+let colourValue = rangeValue / 6;
+
 function updateMacros() {
     let totalMacros = [];
     for (i = 0; i < loseWeight.length; i++) {
@@ -20,8 +23,12 @@ function updateMacros() {
             total.textContent = (sum);
         }
     }
+    rangeValue = intensity.value;
     const totalKcals = totalMacros.map(macro => macro * 4);
-    console.log(totalKcals);
+    const sum = totalKcals.reduce((partialSum, a) => partialSum + a, 0);
+    let totals = document.createElement('p')
+    totals.textContent = (`Kcals: ${sum}`);
+    total.appendChild(totals)
 }
 
 intensity.addEventListener('change', updateMacros);

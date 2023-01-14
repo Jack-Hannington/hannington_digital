@@ -8,14 +8,16 @@
             </div>
             <div class="col-12 text-center">
                 <p style="display:block;margin-bottom: 10px;" id="warning">Your current weight</p>
-                <input id="user-weight" type="text" placeholder="180" value="180">
+                <input id="user-weight" type="text" placeholder="180">
                 <div id="macro-results-card" style="margin-top:30px;padding:20px;" class="card">
+                    <div class="macros-card-header">
+                        <p id="lose-weight">Lose weight</p><p id="gain-weight">Gain weight</p>
+                    </div>
                     <input type="range" min="-3" max="3">
-                    <p>Grams</p>
                     <p>Protein:</p><span class="macros" id="protein"></span></p>
                     <p>Carbs:</p><span class="macros" id="carbs"></span></p>
                     <p>Fats:</p><span class="macros" id="fats"></span></p>
-                    <h3>Total:<span id="total"></span></h3>
+                    <p>Grams:<span id="total"></span></p>
                 </div>
             </div>
 </section>
