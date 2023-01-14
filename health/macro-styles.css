@@ -2,6 +2,20 @@
     font-size:40px;
 }
 
+.macros-card {
+    max-width: 500px;
+    box-shadow: none;
+}
+
+
+
+.blue-shadow {
+    box-shadow: rgba(43, 105, 166, 0.9) 0px 8px 24px;
+}
+.red-shadow {
+    box-shadow: rgba(166, 43, 43, 0.9) 0px 8px 24px;
+}
+
 .macros-card-header{ 
     display:flex;
     justify-content: space-between;
@@ -18,4 +32,18 @@
 
 #gain-weight {
     color:rgba(255, 0, 55, 0.9)
+}
+
+.macros-table td, th {
+    padding:10px;
+}
+
+.macros-table th, .macro-totals{
+    color:#f9f9f9;
+    font-weight: inherit;
+}
+
+.macros-table td:nth-of-type(1){
+    width:70%;
+    text-align: left;
 }

@@ -8,16 +8,34 @@
             </div>
             <div class="col-12 text-center">
                 <p style="display:block;margin-bottom: 10px;" id="warning">Your current weight</p>
-                <input id="user-weight" type="text" placeholder="180">
-                <div id="macro-results-card" style="margin-top:30px;padding:20px;" class="card">
+                <input id="user-weight" type="text" placeholder="180" value="180">
+                <div id="macro-results-card" style="margin-top:30px;padding:20px;" class="card macros-card">
                     <div class="macros-card-header">
                         <p id="lose-weight">Lose weight</p><p id="maintain-weight">Maintain</p><p id="gain-weight">Gain weight</p>
                     </div>
                     <input type="range" min="-3" max="3">
-                    <p>Protein:</p><span class="macros" id="protein"></span></p>
-                    <p>Carbs:</p><span class="macros" id="carbs"></span></p>
-                    <p>Fats:</p><span class="macros" id="fats"></span></p>
-                    <p>Grams:<span id="total"></span></p>
+                    <table class="macros-table">
+                        <thead>
+                            <tr>
+                                <th></th><th>Grams</th><th>Kcals</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                          
+                            <tr>
+                                <td>Protein:</td><td><span class="macros" id="protein"></span></td><td id="protein-kcal"></td>
+                            </tr>
+                            <tr>
+                                <td>Carbs:</td><td><span class="macros" id="carbs"></span></td><td id="carbs-kcal"></td>
+                            </tr>
+                            <tr>
+                                <td>Fats:</td><td> <span class="macros" id="fats"></span></td><td id="fats-kcal"></td>
+                            </tr>
+                            <tr>
+                                <td class="macro-totals"></td><td class="macro-totals" id="total-grams"></td><td class="macro-totals" id="total-kcals"></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 </section>

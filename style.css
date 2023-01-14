@@ -117,6 +117,16 @@ input {
     font-size: 16px;
 }
 
+input[type="range"]:hover{
+    cursor: pointer;
+}
+
+/* tables */
+
+table {
+    border-collapse: collapse;
+}
+
 .scrolled {
     background-color: rgba(0, 0, 0, 1); /* Set a semi-transparent white background color */
     backdrop-filter: blur(1px);
@@ -331,7 +341,7 @@ section {
     cursor: pointer;
     /* transform: scale(1.009); */
     border:1px solid rgba(43, 105, 166, 0.2);
-    box-shadow: rgba(43, 105, 166, 0.2) 0px 8px 24px;
+    /* box-shadow: rgba(43, 105, 166, 0.2) 0px 8px 24px; */
     /* box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px; */
 }
 
