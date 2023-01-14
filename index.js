@@ -2,7 +2,7 @@ const userWeight = document.querySelector('#user-weight');
 const intensity = document.querySelector('input[type="range"]');
 const allMacros = document.querySelectorAll('.macros');
 const total = document.querySelector('#total');
-
+intensity.disabled = true;
 const loseWeight = [
     { id: "protein", kcals: 4, baseline: 1 },
     { id: "carbs", kcals: 4, baseline: 1.5 },
@@ -13,6 +13,13 @@ let rangeValue = intensity.value;
 let colourValue = rangeValue / 6;
 
 function updateMacros() {
+    if (userWeight.value == '') {
+        document.querySelector('#warning').textContent = "Enter your weight";
+        intensity.disabled = true;
+    } else {
+        document.querySelector('#warning').textContent = "Adjust the slider to see your macros";
+        intensity.disabled = false;
+    }
     let totalMacros = [];
     for (i = 0; i < loseWeight.length; i++) {
         if (allMacros[i].id == loseWeight[i].id) {
@@ -33,13 +40,5 @@ function updateMacros() {
 
 intensity.addEventListener('change', updateMacros);
 
-userWeight.addEventListener('keyup', () => {
-    if (userWeight.value == '') {
-        document.querySelector('#warning').textContent = "Enter your weight";
-    } else {
-        document.querySelector('#warning').textContent = "Adjust the slider to see your macros";
-        updateMacros();
-    }
-
-})
+userWeight.addEventListener('keyup', updateMacros);
 

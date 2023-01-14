@@ -9,6 +9,7 @@
 .macros-card-header p {
     display: inline-block;
     opacity: 0.5;
+    font-size: 14px;
 }
 
 #lose-weight {
