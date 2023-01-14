@@ -1,32 +1,38 @@
 const userWeight = document.querySelector('#user-weight');
-const macrosCalcultor = document.querySelector('#macros-calculator');
 const intensity = document.querySelector('input[type="range"]');
-const protein =  document.querySelector('#protein');
-const fats =  document.querySelector('#fats');
-const carbs =  document.querySelector('#carbs');
-const total =  document.querySelector('#total');
+const allMacros = document.querySelectorAll('.macros');
+const total = document.querySelector('#total');
 
-const loseWeight = [{ protein: 1, fats: 0.7, carbs: 0.3}, { protein: 1.2, fats: 0.4, carbs: 1 }, { protein: 1.2, fats: 1, carbs: 1.2 }]
+const loseWeight = [
+    { id: "protein", kcals: 4, baseline: 1 },
+    { id: "carbs", kcals: 4, baseline: 1.5 },
+    { id: "fats", kcals: 9, baseline: 0.3 }
+];
 
+function updateMacros() {
+    let totalMacros = [];
+    for (i = 0; i < loseWeight.length; i++) {
+        if (allMacros[i].id == loseWeight[i].id) {
+            allMacros[i].textContent = parseInt((loseWeight[i].baseline + (intensity.value / 10 + 0.1)) * userWeight.value)
+            totalMacros.push(parseInt((loseWeight[i].baseline + (intensity.value / 10 + 0.1)) * userWeight.value))
+            const sum = totalMacros.reduce((partialSum, a) => partialSum + a, 0);
+
+            total.textContent = (sum);
+        }
+    }
+    const totalKcals = totalMacros.map(macro => macro * 4);
+    console.log(totalKcals);
+}
+
+intensity.addEventListener('change', updateMacros);
 
 userWeight.addEventListener('keyup', () => {
-    document.querySelector('#warning').textContent = "Adjust the slider to see your macros";
+    if (userWeight.value == '') {
+        document.querySelector('#warning').textContent = "Enter your weight";
+    } else {
+        document.querySelector('#warning').textContent = "Adjust the slider to see your macros";
+        updateMacros();
+    }
+
 })
 
-    intensity.addEventListener('change', (event) => {
-        console.log(intensity.value)
-        if (userWeight.value === ''){
-            document.querySelector('#warning').textContent = "Please enter a weight value";
-
-        } else {
-            document.querySelector('#warning').textContent = "Adjust the slider to see your macros";
-            intensity.disabled = false;
-            console.log(intensity.value)
-            protein.textContent = userWeight.value * loseWeight[intensity.value].protein * 4;
-            fats.textContent = userWeight.value * loseWeight[intensity.value].fats * 9;
-            carbs.textContent = userWeight.value * loseWeight[intensity.value].carbs * 4;
-            macrosTotal = userWeight.value * loseWeight[intensity.value].protein * 4 + userWeight.value * loseWeight[intensity.value].carbs * 4 + userWeight.value * loseWeight[intensity.value].fats * 9;
-            total.textContent = macrosTotal;
-        }
-    
-    })
