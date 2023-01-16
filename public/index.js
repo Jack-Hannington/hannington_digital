@@ -71,3 +71,12 @@ intensity.addEventListener('change', updateMacros);
 
 userWeight.addEventListener('keyup', updateMacros);
 
+// function weightConverter(){
+//     if(metric == 'lb'){
+        
+//     } else if (metric == "st"){
+//         userWeight * 6.35;
+//     } else {
+//         userWeight * 2.205
+//     }
+// }
