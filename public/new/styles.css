@@ -9,6 +9,8 @@
 body {
     background-color: #0B0E1C;
     font-family: Inter;
+    color:#EBEBEB;
+    height: 2000px;
 }
 
 
@@ -16,14 +18,18 @@ a, button {
     display: inline-block;
     cursor: pointer;
 }
+
+a {
+    text-decoration: none;
+    color:inherit;
+}
 nav {
     background: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
     border-radius: 4px;
-    color:#ebebeb;
     padding:10px 0px;
     display: flex;
-    width:340px;
-    max-width: 80%;
+    width:360px;
+    max-width: 85%;
     margin:auto;
     position: fixed;
     top: 90%;
@@ -38,6 +44,10 @@ nav {
     font-weight: 300;
     align-items:center;
     transition: 0.3s;
+}
+
+.active {
+    color:var(--highlight);
 }
 
 .nav-item:hover {

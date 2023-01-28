@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>New</title>
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
-    <style>
-         @import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@300;500;700&family=Inter:wght@200;400;500;600;700;900&family=Lora:wght@400;500;600;700&display=swap');
-    </style>
+
 </head>
+
 <body>
 
     <nav>
@@ -18,7 +21,7 @@
             <span class="iconify" data-icon="heroicons:home-solid"></span>
             Home
         </a>
-        <a class="nav-item">
+        <a href="/apps" class="nav-item">
             <span class="iconify" data-icon="ri:apps-line"></span>
             Apps
         </a>
@@ -31,6 +34,25 @@
             Contact
         </a>
     </nav>
-    
+    <header>
+        <div class="section-content">
+            <h1>Home</h1>
+            <p>Home content</p>
+        </div>
+    </header>
+    <section id="portfolio">
+
+    </section>
+    <script>
+        //Active page
+        const navItems = Array.from(document.querySelectorAll('.nav-item'));
+        for (let item of navItems) {
+            if (document.title === item.textContent.trim()) {
+                item.classList.add('active')
+            }
+        }
+    </script>
+
 </body>
+
 </html>

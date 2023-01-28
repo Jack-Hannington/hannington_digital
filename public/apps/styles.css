@@ -45,7 +45,6 @@ nav {
     align-items:center;
     transition: 0.3s;
 }
-
 .active {
     color:var(--highlight);
 }
