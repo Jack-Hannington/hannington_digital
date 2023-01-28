@@ -11,7 +11,7 @@
 body {
     background-color: #060B23;
     font-family: Inter;
-    color:#EBEBEB;
+    color:#bbbbbb;
     height: 2000px;
 }
 
@@ -67,7 +67,7 @@ img {
 .logo-written {
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     color:#cacaca;
 }
 
@@ -91,8 +91,8 @@ nav {
     border-radius: 4px;
     padding:10px 0px;
     display: flex;
-    width:360px;
-    max-width: 85%;
+    width:400px;
+    max-width: 90%;
     margin:auto;
     position: fixed;
     top: auto;
@@ -159,7 +159,7 @@ header button {
         background: none;
     }
     .logo-written {
-        font-size: 16px;
+        font-size: 22px;
     }
     .nav-wrapper {
         justify-content: space-between;
