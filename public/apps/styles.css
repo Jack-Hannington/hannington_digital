@@ -59,6 +59,13 @@ img {
     width: 120px;
 }
 
+.logo-written {
+    font-size: 16px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    color:#cacaca;
+}
+
 .primary-button {
     background: linear-gradient(177.39deg, rgba(0, 41, 255, 0.249) 2.18%, rgba(34, 60, 188, 0) 119.23%);
     color: #ebebeb;
