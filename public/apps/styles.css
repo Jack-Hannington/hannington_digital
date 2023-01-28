@@ -4,6 +4,8 @@
 
 :root {
     --highlight: #71ADCD;
+    --blue-graident: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
+    font-size: 16px;
 }
 
 body {
@@ -13,6 +15,9 @@ body {
     height: 2000px;
 }
 
+h1, h2 {
+    font-weight: 500;
+}
 
 a, button {
     display: inline-block;
@@ -23,8 +28,51 @@ a {
     text-decoration: none;
     color:inherit;
 }
+
+button, span, input, label {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    border:none;
+    background:white;
+    color:black;
+    border-radius: 4px;
+    padding:10px 20px;
+    transition: all 1s;
+}
+
+img {
+    max-width: 100%;
+}
+
+.nav-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1080px;
+    margin:auto;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.primary-button {
+    background: linear-gradient(177.39deg, rgba(0, 41, 255, 0.249) 2.18%, rgba(34, 60, 188, 0) 119.23%);
+    color: #ebebeb;
+    transition:1s;
+}
+
+.primary-button:hover {
+    color: #fff;
+    background: linear-gradient(180deg, #1431d1 0%, #0C0D11 100%);
+    transition:1s;
+}
+
 nav {
-    background: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
+    background: var(--blue-graident);
     border-radius: 4px;
     padding:10px 0px;
     display: flex;
@@ -32,7 +80,8 @@ nav {
     max-width: 85%;
     margin:auto;
     position: fixed;
-    top: 90%;
+    top: auto;
+    bottom:1.35rem;
     left: 50%;
     transform: translate(-50%, -50%);
 }
@@ -45,6 +94,7 @@ nav {
     align-items:center;
     transition: 0.3s;
 }
+
 .active {
     color:var(--highlight);
 }
@@ -57,4 +107,27 @@ nav {
 .nav-item  > .iconify {
    font-size: 24px;
    margin-bottom:6px;
+}
+
+
+
+/* Layouts */
+
+.section-content {
+    max-width: 1080px;
+    margin:auto;
+}
+
+/* Media queries  */
+
+
+@media (min-width:1000px){
+    nav {
+        position: relative;
+        top: auto;
+        bottom:auto;
+        left: auto;
+        transform: translate(0%, 0%);
+        margin: 0px;
+    }
 }

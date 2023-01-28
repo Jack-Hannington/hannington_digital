@@ -11,16 +11,20 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+
 </head>
 
 <body>
-
+    <div class="nav-wrapper">
+    <div class="logo">
+        <img src="https://cdn.hashnode.com/res/hashnode/image/upload/v1674944063371/99cdceb3-53fb-4c5d-ba8c-4690acae32f4.svg" alt="logo">
+    </div>
     <nav>
         <a href="/new" class="nav-item">
             <span class="iconify" data-icon="heroicons:home-solid"></span>
             Home
         </a>
-        <a class="nav-item">
+        <a href="/apps" class="nav-item">
             <span class="iconify" data-icon="ri:apps-line"></span>
             Apps
         </a>
@@ -33,18 +37,18 @@
             Contact
         </a>
     </nav>
-
+</div>
     <header>
         <div class="section-content">
             <h1>Apps</h1>
-            <p>Apps content</p>
+            <p>App content</p>
+            <button class="primary-button">Get in touch</button>
         </div>
     </header>
     <section id="portfolio">
 
     </section>
-<script>
-    //Active page
+    <script>
         //Active page
         const navItems = Array.from(document.querySelectorAll('.nav-item'));
         for (let item of navItems) {
@@ -52,8 +56,8 @@
                 item.classList.add('active')
             }
         }
+    </script>
 
-</script>
 </body>
 
 </html>
