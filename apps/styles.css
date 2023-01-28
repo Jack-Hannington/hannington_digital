@@ -19,6 +19,10 @@ h1, h2 {
     font-weight: 500;
 }
 
+p {
+    line-height: 24px;
+}
+
 a, button {
     display: inline-block;
     cursor: pointer;
@@ -38,7 +42,7 @@ button {
     border:none;
     background:white;
     color:black;
-    border-radius: 4px;
+    border-radius: 20px;
     padding:10px 20px;
 
 }
@@ -49,11 +53,12 @@ img {
 
 .nav-wrapper {
     display: flex;
-    justify-content: space-between;
     align-items: center;
     max-width: 1080px;
-    margin:auto;
+    padding:10px;
 }
+
+
 
 .logo img {
     width: 120px;
@@ -61,9 +66,13 @@ img {
 
 .logo-written {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 400;
     letter-spacing: 2px;
     color:#cacaca;
+}
+
+.logo-written {
+    font-size: 12px;
 }
 
 .primary-button {
@@ -122,7 +131,19 @@ nav {
 .section-content {
     max-width: 1080px;
     margin:auto;
+    padding:20px 10px;
 }
+
+/* Header */
+
+header button {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+.header-content {
+    max-width: 700px;
+}
+
 
 /* Media queries  */
 
@@ -135,5 +156,15 @@ nav {
         left: auto;
         transform: translate(0%, 0%);
         margin: 0px;
+        background: none;
     }
+    .logo-written {
+        font-size: 16px;
+    }
+    .nav-wrapper {
+        justify-content: space-between;
+        padding:0px 10px;
+        margin:auto;
+    }
+    
 }
