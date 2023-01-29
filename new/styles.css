@@ -332,6 +332,8 @@ header button {
     }
     .portfolio-sidebar {
       width:100%;
+      border:none;
+      padding:10px 0px;
     }
     .portfolio-sidebar ul {
       /* padding-inline-start:10px; */
@@ -341,6 +343,9 @@ header button {
       gap:20px;
       overflow:auto;
       width:100%;
+    border-bottom: 1px solid #373737;
+    border-top: 1px solid #373737;
+
     }
     li::before {
       display:none;
