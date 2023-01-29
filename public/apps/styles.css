@@ -168,7 +168,8 @@ nav {
 
 header {
     background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg');
-
+    padding-top:20px;
+    padding-bottom: 60px;
 }
 
 header button {
@@ -247,6 +248,7 @@ header button {
   
   .portfolio-links{
     transition:0.5s;
+    padding: 5px 0px;
   }
 
   .active-link {
@@ -297,7 +299,26 @@ header button {
      display: block;
      margin-right: 10px;
   }
+
+  @keyframes fadein {
+    from {
+      opacity:0;
+    }
   
+    to {
+      opacity:1;
+    }
+  }
+
+  @keyframes fadeout {
+    from {
+      opacity:1;
+    }
+  
+    to {
+      opacity:0;
+    }
+  }
 
   @keyframes slidein {
     from {
@@ -332,6 +353,8 @@ header button {
     }
     .portfolio-sidebar {
       width:100%;
+      border:none;
+      padding:10px 0px;
     }
     .portfolio-sidebar ul {
       /* padding-inline-start:10px; */
@@ -341,6 +364,7 @@ header button {
       gap:20px;
       overflow:auto;
       width:100%;
+    border-bottom: 1px solid #373737;
     }
     li::before {
       display:none;
