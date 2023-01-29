@@ -102,14 +102,15 @@ nav {
     padding:10px 0px;
     display: flex;
     width:400px;
-    max-width: 90%;
+    max-width: 92%;
     margin:auto;
     position: fixed;
     top: auto;
-    bottom:1.35rem;
+    bottom:-10px;
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 1;
+  
 }
 
 .nav-item {
@@ -247,6 +248,11 @@ header button {
   .portfolio-links{
     transition:0.5s;
   }
+
+  .active-link {
+      color:var(--highlight);
+      transform:translateX(5%);
+  }
   
   .portfolio-links:hover {
     transform:translateX(5%);
@@ -322,6 +328,7 @@ header button {
     }
     .portfolio-content {
       width:100%;
+      padding:10px 0px;
     }
     .portfolio-sidebar {
       width:100%;
