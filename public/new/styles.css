@@ -18,6 +18,7 @@ body {
     font-family: Inter;
     color:#cecece;
     height: 2000px;
+    margin:0;
 }
 
 h1, h2, h3, h4 {
@@ -171,7 +172,7 @@ nav {
 .section-content {
     max-width: 1080px;
     margin:auto;
-    padding:20px 10px;
+    padding:20px 16px;
 }
 
 .section-tag {
@@ -414,4 +415,8 @@ header button {
     header {
         background-position: left;
     }
+    .portfolio-sidebar h2 {
+        display: none;
+    }
   }
+
