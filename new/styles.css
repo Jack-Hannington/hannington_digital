@@ -400,7 +400,7 @@ header button {
       gap:20px;
       overflow:auto;
       width:100%;
-    border-bottom: 1px solid #373737;
+    /* border-bottom: 1px solid #373737; */
     }
     li::before {
       display:none;
@@ -412,6 +412,6 @@ header button {
         transform:translateX(0%);
     }
     header {
-        background-position: center;
+        background-position: left;
     }
   }
