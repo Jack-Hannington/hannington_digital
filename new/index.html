@@ -41,67 +41,68 @@
     <header>
         <div class="section-content">
             <div class="header-content">
-                <h1>Home</h1>
-                <p>Web and Shopify development. Take a look at some completed projects below. Find free plain english
-                    guides, apps and checklists for getting your business started online on the resources page.</p>
-                <a href="#portfolio"><button class="primary-button">Explore work</button></a> <a href="/apps">Get in touch</a>
+                <h1>Hannington Digital</h1>
+                <p>Web development services with a specialism in e-commerce. Find a range of projects below or click
+                    “Tips” to view free guides designed to help businesses succeed online. </p>
+                <a href="#portfolio"><button class="primary-button">Explore work</button></a> <a href="/apps">Get in
+                    touch</a>
             </div>
         </div>
-        
+
     </header>
     <section id="portfolio">
         <div class="section-content">
             <div class="portfolio">
                 <div class="portfolio-sidebar">
-                <h2>Portfolio</h2>
-                  <ul>
-                    <li class="portfolio-links" data-portfolio="shopify">Shopify theme</li>
-                    <li class="portfolio-links" data-portfolio="wordpress">Wordpress dev</li>
-                    <li class="portfolio-links" data-portfolio="tracker">Live tracking app</li>
-                    <li class="portfolio-links" data-portfolio="roll">Roll or hold game</li>
+                    <h2>Portfolio</h2>
+                    <ul>
+                        <li class="portfolio-links active-link" data-portfolio="shopify">Shopify theme</li>
+                        <li class="portfolio-links" data-portfolio="wordpress">Wordpress dev</li>
+                        <li class="portfolio-links" id="tracking-app" data-portfolio="tracker">Live tracking app</li>
+                        <li class="portfolio-links" data-portfolio="roll">Roll or hold game</li>
 
-                  </ul>
+                    </ul>
                 </div>
                 <div class="portfolio-content">
-                  <div class="content portfolio-item" id="shopify">
-                    <span class="section-tag green">Shopify theme</span>
-                    <h2>Custom theme development</h2>
-                    <a class="page-preview">The task was to do X</a>
-                    <h3>New customisable sections</h3>
-                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                    <p>Insert slider here</p>
-                    <h3>Performance and accessibility</h3>
-                    <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
-                  </div>
-                  <div class="content portfolio-item" id="wordpress">
-                    <h2>Wordpress</h2>
-                    <a class="page-preview">The task was to do X</a>
-                    <h3>New customisable sections</h3>
-                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                    <p>Insert slider here</p>
-                    <h3>Performance and accessibility</h3>
-                    <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
-                  </div>
-                   <div class="content portfolio-item" id="roll">
-                    <h2>Roll or hold</h2>
-                    <a class="page-preview">The task was to do X</a>
-                    <h3>New customisable sections</h3>
-                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                    <p>Insert slider here</p>
-                    <h3>Performance and accessibility</h3>
-                    <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
-                  </div>
-                   <div class="content portfolio-item" id="tracker">
-                    <h2>Live tracker</h2>
-                    <a class="page-preview">The task was to do X</a>
-                    <h3>New customisable sections</h3>
-                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                    <p>Insert slider here</p>
-                    <h3>Performance and accessibility</h3>
-                    <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
-                  </div>
+                    <div class="content portfolio-item" id="shopify">
+                        <span class="section-tag green">Shopify theme</span>
+                        <h2>Custom theme development</h2>
+                        <a class="page-preview">The task was to do X</a>
+                        <h3>New customisable sections</h3>
+                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                        <p>Insert slider here</p>
+                        <h3>Performance and accessibility</h3>
+                        <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
+                    </div>
+                    <div class="content portfolio-item" id="wordpress">
+                        <h2>Wordpress</h2>
+                        <a class="page-preview">The task was to do X</a>
+                        <h3>New customisable sections</h3>
+                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                        <p>Insert slider here</p>
+                        <h3>Performance and accessibility</h3>
+                        <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
+                    </div>
+                    <div class="content portfolio-item" id="roll">
+                        <h2>Roll or hold</h2>
+                        <a class="page-preview">The task was to do X</a>
+                        <h3>New customisable sections</h3>
+                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                        <p>Insert slider here</p>
+                        <h3>Performance and accessibility</h3>
+                        <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
+                    </div>
+                    <div class="content portfolio-item" id="tracker">
+                        <h2>Live tracker</h2>
+                        <a class="page-preview">The task was to do X</a>
+                        <h3>New customisable sections</h3>
+                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                        <p>Insert slider here</p>
+                        <h3>Performance and accessibility</h3>
+                        <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
     </section>
     <script>
@@ -114,24 +115,43 @@
         }
         //Portfolio animations
         const allPortfolioLinks = document.querySelectorAll('.portfolio-links');
-        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
 
-        let startX;
-        let endX;
 
         allPortfolioLinks.forEach(link => {
             link.addEventListener('click', (event) => {
-                portfolioItems.forEach(element => {
-                    element.classList.add('hide');
+                event.preventDefault();
+                const clickedLink = event.target;
+
+                // Remove active link class from all links
+                allPortfolioLinks.forEach(otherLink => {
+                    otherLink.classList.remove('active-link');
                 });
-                activeItem = event.target.dataset.portfolio;
-                showSlide = document.getElementById(activeItem)
-                showSlide.classList.remove('hide');
-                showSlide.classList.add('show');
-           
-                link.classList.add('active-link')
+
+                // Add active link class to clicked link
+                clickedLink.classList.add('active-link');
+
+                // Hide all portfolio items except the one corresponding to the clicked link
+                portfolioItems.filter(item => item.id !== clickedLink.dataset.portfolio).forEach(item => {
+                    item.classList.add('hide');
+                });
+
+                // Show the portfolio item corresponding to the clicked link
+                const targetItem = document.getElementById(clickedLink.dataset.portfolio);
+                targetItem.classList.remove('hide');
+                targetItem.classList.add('show');
+
+                // Scroll the parent container of the clicked link so that the clicked link is centered
+                const parentContainer = link.closest('ul');
+                const parentContainerRect = parentContainer.getBoundingClientRect();
+                const linkRect = clickedLink.getBoundingClientRect();
+                parentContainer.scroll({
+                    left: linkRect.left - parentContainerRect.left - (parentContainerRect.width - linkRect.width) / 2,
+                    behavior: 'smooth'
+                });
             });
         });
+
 
 
 

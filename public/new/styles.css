@@ -9,6 +9,10 @@
     font-size: 16px;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+
 body {
     background-color: #060B23;
     font-family: Inter;
@@ -18,16 +22,26 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 500;
-    color:#fff;
+    color:rgb(244, 244, 244);
+}
+
+h1 {
+    margin-bottom: 12px;
 }
 
 h2 {
-    margin-top: 2px;
-    margin-bottom: 16px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    margin-top: 30px;
+    margin-bottom: 0px;
 }
 
 p {
     line-height: 24px;
+    margin:6px 0px;
 }
 
 a, button {
@@ -169,11 +183,13 @@ nav {
 header {
     background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg');
     padding-top:20px;
+    background-position: right;
+    background-repeat: no-repeat;
     padding-bottom: 60px;
 }
 
 header button {
-    margin-top: 10px;
+    margin-top: 20px;
     margin-right: 20px;
 }
 .header-content {
@@ -213,8 +229,13 @@ header button {
 
 
 #portfolio {
-    border-top:1px solid #373737;
-    border-bottom: 1px solid #373737;
+    border-top:1px solid #2C3044;
+    border-bottom: 1px solid #2C3044;
+}
+
+#portfolio > .section-content {
+    padding-top:0px;
+    padding-bottom:0px;
 }
 
 .portfolio {
@@ -226,11 +247,11 @@ header button {
   .portfolio-sidebar {
     width:25%;
     border-right: 1px solid #373737;
-    padding: 20px 0px;
+    padding: 40px 0px;
   }
 
   .portfolio-sidebar h2 {
-      font-size: 20px;
+      font-size: 18px;
   }
   
   .portfolio-content {
@@ -238,7 +259,7 @@ header button {
     width:75%;
     max-width:100%;
     height:800px;
-    padding: 20px;
+    padding: 40px 40px;
   }
   .portfolio-item {
     position:absolute;
@@ -249,15 +270,20 @@ header button {
   .portfolio-links{
     transition:0.5s;
     padding: 5px 0px;
+    color:#a5a5a5;
   }
 
-  .active-link {
-      color:var(--highlight);
-      transform:translateX(5%);
-  }
+
+
+
   
   .portfolio-links:hover {
     transform:translateX(5%);
+    color:#fff;
+  }
+
+  .portfolio-links:hover::before {
+      background-color: blue;
   }
   
   .portfolio-item {
@@ -277,7 +303,7 @@ header button {
   }
   
   .hide {
-    animation:slideout 1s;
+    animation:slideout 0.4s;
     opacity:0;
   }
   
@@ -299,6 +325,15 @@ header button {
      display: block;
      margin-right: 10px;
   }
+
+
+  .active-link {
+    color:#fff;
+    transform:translateX(5%);
+}
+  .active-link::before {
+    background-color:#1431d1;
+}
 
   @keyframes fadein {
     from {
@@ -368,5 +403,14 @@ header button {
     }
     li::before {
       display:none;
+    }
+    .active-link {
+        transform:translateX(0%);
+    }
+    .active-link:hover {
+        transform:translateX(0%);
+    }
+    header {
+        background-position: center;
     }
   }
