@@ -5,18 +5,25 @@
 :root {
     --highlight: #71ADCD;
     --blue-graident: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
+    --green: #96B15B;
     font-size: 16px;
 }
 
 body {
     background-color: #060B23;
     font-family: Inter;
-    color:#bbbbbb;
+    color:#cecece;
     height: 2000px;
 }
 
-h1, h2 {
+h1, h2, h3, h4 {
     font-weight: 500;
+    color:#fff;
+}
+
+h2 {
+    margin-top: 2px;
+    margin-bottom: 16px;
 }
 
 p {
@@ -49,6 +56,7 @@ button {
 
 img {
     max-width: 100%;
+    display: block;
 }
 
 .nav-wrapper {
@@ -59,6 +67,9 @@ img {
 }
 
 
+.logo {
+    display: none;
+}
 
 .logo img {
     width: 120px;
@@ -71,18 +82,17 @@ img {
     color:#cacaca;
 }
 
-.logo-written {
-    font-size: 12px;
-}
+
 
 .primary-button {
-    background: linear-gradient(177.39deg, rgba(0, 41, 255, 0.249) 2.18%, rgba(34, 60, 188, 0) 119.23%);
+    
+    background: linear-gradient(180deg, #1431d1 0%, #0C0D11 100%);
     color: #ebebeb;
 }
 
 .primary-button:hover {
     color: #fff;
-    background: linear-gradient(180deg, #1431d1 0%, #0C0D11 100%);
+    background: linear-gradient(177.39deg, rgba(0, 41, 255, 0.249) 2.18%, rgba(34, 60, 188, 0) 119.23%);
     transition: all 1s;
 }
 
@@ -99,6 +109,7 @@ nav {
     bottom:1.35rem;
     left: 50%;
     transform: translate(-50%, -50%);
+    z-index: 1;
 }
 
 .nav-item {
@@ -110,11 +121,15 @@ nav {
     transition: 0.3s;
 }
 
+.nav-wrapper {
+    padding:0px;
+}
+
 .active {
     color:var(--highlight);
 }
 
-.nav-item:hover {
+.nav-item:hover, li:hover {
     color: var(--highlight);
     cursor: pointer;
 }
@@ -125,6 +140,15 @@ nav {
 }
 
 
+/* Utilities */
+.green {
+    color: var(--green);
+}
+
+.green-bg {
+    background-color: var(--green);
+}
+
 
 /* Layouts */
 
@@ -134,7 +158,17 @@ nav {
     padding:20px 10px;
 }
 
+.section-tag {
+    font-weight: 500;
+    font-size: 14px;
+}
+
 /* Header */
+
+header {
+    background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg');
+
+}
 
 header button {
     margin-top: 10px;
@@ -159,7 +193,10 @@ header button {
         background: none;
     }
     .logo-written {
-        font-size: 22px;
+        font-size: 16px;
+    }
+    .logo {
+        display: block;
     }
     .nav-wrapper {
         justify-content: space-between;
@@ -168,3 +205,137 @@ header button {
     }
     
 }
+
+
+/* Portfolio styles */
+
+
+#portfolio {
+    border-top:1px solid #373737;
+    border-bottom: 1px solid #373737;
+}
+
+.portfolio {
+    display:flex;
+    width:100%;
+    height:800px;
+  }
+  
+  .portfolio-sidebar {
+    width:25%;
+    border-right: 1px solid #373737;
+    padding: 20px 0px;
+  }
+
+  .portfolio-sidebar h2 {
+      font-size: 20px;
+  }
+  
+  .portfolio-content {
+    position:relative;
+    width:75%;
+    max-width:100%;
+    height:800px;
+    padding: 20px;
+  }
+  .portfolio-item {
+    position:absolute;
+    display:none;
+  }
+  
+  
+  .portfolio-links{
+    transition:0.5s;
+  }
+  
+  .portfolio-links:hover {
+    transform:translateX(5%);
+  }
+  
+  .portfolio-item {
+    position:absolute;
+    display:none;
+  }
+  
+  .portfolio-item:nth-of-type(1){
+    display:block;
+  }
+  
+  
+  .show {
+      animation:slidein 0.4s;
+    display:block;
+    opacity:1;
+  }
+  
+  .hide {
+    animation:slideout 1s;
+    opacity:0;
+  }
+  
+  .portfolio-sidebar > ul {
+    list-style-type:none;
+    padding-inline-start:0px;
+  }
+  li {
+    display:flex;
+    align-items:center;
+    white-space:nowrap;
+  }
+
+  li::before {
+     content: "";
+     width: 40px;
+     height: 1px;
+     background-color:white;
+     display: block;
+     margin-right: 10px;
+  }
+  
+
+  @keyframes slidein {
+    from {
+      transform:translateX(200%);opacity:0;
+    }
+  
+    to {
+      transform:translateX(0%);
+      opacity:1;
+    }
+  }
+  
+  @keyframes slideout {
+    from {
+       transform:translateX(0%);
+       opacity:1;
+    }
+  
+    to {
+      transform:translateX(-200%);
+      opacity:0;
+    }
+  }
+  
+  @media (max-width:800px){
+    .portfolio {
+      flex-direction:column;
+    }
+    .portfolio-content {
+      width:100%;
+    }
+    .portfolio-sidebar {
+      width:100%;
+    }
+    .portfolio-sidebar ul {
+      /* padding-inline-start:10px; */
+      padding:10px 0px;
+      display:flex;
+      flex-wrap:no-wrap;
+      gap:20px;
+      overflow:auto;
+      width:100%;
+    }
+    li::before {
+      display:none;
+    }
+  }
