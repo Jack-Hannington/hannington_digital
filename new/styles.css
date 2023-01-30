@@ -24,6 +24,7 @@ body {
 h1, h2, h3, h4 {
     font-weight: 500;
     color:rgb(244, 244, 244);
+    font-family: Lexend;
 }
 
 h1 {
@@ -79,13 +80,9 @@ img {
     display: flex;
     align-items: center;
     max-width: 1080px;
-    padding:10px;
+    padding:16px;
 }
 
-
-.logo {
-    display: none;
-}
 
 .logo img {
     width: 120px;
@@ -94,7 +91,7 @@ img {
 .logo-written {
     font-size: 16px;
     font-weight: 400;
-    letter-spacing: 1px;
+    font-family: Lexend;
     color:#cacaca;
 }
 
@@ -136,11 +133,9 @@ nav {
     font-weight: 300;
     align-items:center;
     transition: 0.3s;
+    font-family: Lexend;
 }
 
-.nav-wrapper {
-    padding:0px;
-}
 
 .active {
     color:var(--highlight);
@@ -195,7 +190,7 @@ header button {
     margin-right: 20px;
 }
 .header-content {
-    max-width: 700px;
+    max-width: 600px;
 }
 
 
@@ -220,7 +215,7 @@ header button {
     }
     .nav-wrapper {
         justify-content: space-between;
-        padding:0px 10px;
+        padding:0px 16px;
         margin:auto;
     }
     
