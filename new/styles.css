@@ -222,6 +222,11 @@ header button {
         padding:0px 16px;
         margin:auto;
     }
+    .portfolio-sidebar {
+      max-height: 60%;
+      position: sticky;
+      top:0;
+    }
     
 }
 
