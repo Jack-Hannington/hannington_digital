@@ -222,6 +222,9 @@ header button {
         padding:0px 16px;
         margin:auto;
     }
+    .portfolio-sidebar {
+      max-height: 60%;
+    }
     
 }
 
@@ -249,6 +252,8 @@ header button {
     width:25%;
     border-right: 1px solid #373737;
     padding: 40px 0px;
+    position: sticky;
+    top:0;
   }
 
   .portfolio-sidebar h2 {
@@ -390,7 +395,8 @@ header button {
     .portfolio-sidebar {
       width:100%;
       border:none;
-      padding:10px 0px;
+      padding:0px 0px;
+      z-index: 1;
     }
     .portfolio-sidebar ul {
       /* padding-inline-start:10px; */
