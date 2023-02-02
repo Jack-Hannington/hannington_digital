@@ -6,6 +6,7 @@
     --highlight: #71ADCD;
     --blue-graident: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
     --green: #96B15B;
+    --dark-blue: #060B23;
     font-size: 16px;
 }
 
@@ -14,7 +15,7 @@ html {
   }
 
 body {
-    background-color: #060B23;
+    background-color: var(--dark-blue);
     font-family: Inter;
     color:#cecece;
     height: 2000px;
@@ -251,6 +252,7 @@ header button {
   .portfolio-sidebar {
     width:25%;
     border-right: 1px solid #373737;
+    background-color: var(--dark-blue);
     padding: 40px 0px;
     position: sticky;
     top:0;
@@ -413,6 +415,7 @@ header button {
     }
     .active-link {
         transform:translateX(0%);
+        border-bottom:2px solid #1431d1;
     }
     .active-link:hover {
         transform:translateX(0%);
