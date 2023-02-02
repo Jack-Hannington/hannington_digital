@@ -79,10 +79,43 @@ button {
 
 }
 
+/* Images */
+
 img {
     max-width: 100%;
-    display: block;
+    display: inline-block;
 }
+
+.logo img {
+  width: 120px;
+}
+
+
+.background-image {
+  object-fit: cover;
+  position: absolute;
+  right: 0;
+  height: 500px;
+  top: 0;
+  z-index: -1;
+}
+
+.portfolio-image-holster{
+  padding:20px 0px;
+  display: flex;
+  gap:20px;
+  scroll-snap-type: x mandatory;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.portfolio-image {
+  width:320px;
+  border-radius: 4px;
+}
+
+
+/* NAV */
 
 .nav-wrapper {
     display: flex;
@@ -92,9 +125,6 @@ img {
 }
 
 
-.logo img {
-    width: 120px;
-}
 
 .logo-written {
     font-size: 16px;
@@ -182,16 +212,19 @@ nav {
 .section-tag {
     font-weight: 500;
     font-size: 14px;
+    font-family: Lexend;
 }
 
 /* Header */
 
 header {
-    background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg');
+    /* background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg'); */
     background-position: right;
     background-repeat: no-repeat;
     padding-bottom: 60px;
 }
+
+
 
 header button {
     margin-top: 20px;
@@ -250,12 +283,11 @@ header button {
 .portfolio {
     display:flex;
     width:100%;
-    height:800px;
+
   }
   
   .portfolio-sidebar {
     width:25%;
-    border-right: 1px solid #373737;
     background-color: var(--dark-blue);
     padding: 40px 0px;
     position: sticky;
@@ -272,6 +304,7 @@ header button {
     max-width:100%;
     height:800px;
     padding: 40px 40px;
+    border-left: 1px solid #2C3044;
   }
   .portfolio-item {
     position:absolute;
@@ -397,10 +430,10 @@ header button {
     .portfolio-content {
       width:100%;
       padding:10px 0px;
+      border-left:none;
     }
     .portfolio-sidebar {
       width:100%;
-      border:none;
       padding:0px 0px;
       z-index: 1;
     }
@@ -433,6 +466,9 @@ header button {
     }
     .portfolio-sidebar h2 {
         display: none;
+    }
+    .background-image {
+      opacity: 0.8;
     }
   }
 
