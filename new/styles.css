@@ -112,6 +112,7 @@ img {
 .portfolio-image {
   width:320px;
   border-radius: 4px;
+  scroll-snap-align: start;
 }
 
 
@@ -432,10 +433,18 @@ header button {
       padding:10px 0px;
       border-left:none;
     }
+    .portfolio-content h2 {
+      position:sticky;
+      top:0;
+      background-color: var(--dark-blue);
+      padding:3px 0px;
+      z-index:1;
+    }
     .portfolio-sidebar {
       width:100%;
       padding:0px 0px;
       z-index: 1;
+      position: relative;
     }
     .portfolio-links{
       padding-bottom: 10px;
