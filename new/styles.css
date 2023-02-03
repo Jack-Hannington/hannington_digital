@@ -305,6 +305,10 @@ header button {
     padding: 40px 40px;
     border-left: 1px solid #2C3044;
   }
+
+  .portfolio-content h3 {
+    margin-top:50px;
+  }
   .portfolio-item {
     position:absolute;
     display:none;
@@ -423,7 +427,7 @@ header button {
 
  .lighthouse-container {
    margin-top:20px;
-   width:400px;
+   width:300px;
    max-width: 100%;
    display: flex;
    gap:20px;
