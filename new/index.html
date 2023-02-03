@@ -8,7 +8,8 @@
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend&display=swap"
+        rel="stylesheet">
     <link href="styles.css" type="text/css" rel="stylesheet">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
 
@@ -39,12 +40,17 @@
         </nav>
     </div>
     <header>
-        <img loading="lazy" alt="square grid background" class="background-image" src="https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg" style="object-fit:cover;position: absolute;">
+        <img loading="lazy" alt="square grid background" class="background-image"
+            src="https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg"
+            style="object-fit:cover;position: absolute;">
         <div class="section-content">
             <div class="header-content">
                 <h1>Web development & ecommerce</h1>
-                <p>Freelance web developer and current Head of Ecommerce at <a href="/contact" class="link" title="about page">Appliance World</a></a>. Find a range of projects below or click 
-                    <a class="link" href="/tips"> "Tips" </a> for jargon-free starter guides designed to help businesses grow online.</p>
+                <p>Freelance web developer and current Head of Ecommerce at <a href="/contact" class="link"
+                        title="about page">Appliance World</a></a>. Find a range of projects below or click
+                    <a class="link" href="/tips"> "Tips" </a> for jargon-free starter guides designed to help businesses
+                    grow online.
+                </p>
                 <a href="#portfolio"><button class="primary-button">Explore work</button></a> <a href="/apps">Get in
                     touch</a>
             </div>
@@ -64,20 +70,40 @@
                     </ul>
                 </div>
                 <div class="portfolio-content">
-                    <div class="content portfolio-item" id="shopify">
+                    <div class="content portfolio-item show" id="shopify">
                         <span class="section-tag green">Shopify theme</span>
                         <h2>Custom theme development</h2>
-                        <p>Sports wearable company INCUS had designed a store using Adobe XD to reflect the new direction of the company. Using <a href="#">Dawn</a> as a base and Shopify's new sections anywhere architecture I created a custom theme to match their designs.</p>
+                        <p>Sports wearable company INCUS had designed a store using Adobe XD to reflect the new
+                            direction of the company. Using <a href="#">Dawn</a> as a base and Shopify's new
+                            sections anywhere architecture I created a custom theme to match their designs.</p>
                         <div class="portfolio-image-holster">
-                            <img class="portfolio-image" loading="lazy" src="https://res.cloudinary.com/db2okldfm/image/upload/v1675373459/Hannington%20Digital/INCUS_home_lqxgnd.webp" alt="INCUS Performance Shopify home page"> 
-                            <img class="portfolio-image" loading="lazy" src="https://res.cloudinary.com/db2okldfm/image/upload/v1675374267/Hannington%20Digital/INCUS_device_shot_noia5b.webp" alt="INCUS Performance Shopify live device page"> 
+                            <img class="portfolio-image" loading="lazy"
+                                src="https://res.cloudinary.com/db2okldfm/image/upload/v1675373459/Hannington%20Digital/INCUS_home_lqxgnd.webp"
+                                alt="INCUS Performance Shopify home page">
+                            <img id="port-image" class="portfolio-image" loading="lazy"
+                                src="https://res.cloudinary.com/db2okldfm/image/upload/v1675374267/Hannington%20Digital/INCUS_device_shot_noia5b.webp"
+                                alt="INCUS Performance Shopify live device page">
                         </div>
 
-                        <h3>New customisable sections</h3>
-                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                        <p>Insert slider here</p>
                         <h3>Performance and accessibility</h3>
-                        <p>Google Lighthouse gave it X scores at the time of launch (March 2022)</p>
+                        <p>The redesign created greater emphasis on purchasing, a refined menu and greatly improved performance, SEO and accessibility metrics from Google Lighthouse reports. </p>
+                        <div class="lighthouse-container">
+                        <div class="count-up">
+                            <span class="count-up-number" data-target="96"></span>
+                            <span class="count-up-text">SEO</span>
+                        </div>
+                        <div class="count-up">
+                            <span class="count-up-number" data-target="94"></span>
+                            <span class="count-up-text">A11Y</span>
+                        </div>
+                        <div class="count-up">
+                            <span class="count-up-number" data-target="99"></span>
+                            <span class="count-up-text">Perf</span>
+                        </div>
+                    </div>
+                    <h3>New customisable sections</h3>
+                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                    <p>Insert slider here</p>
                     </div>
                     <div class="content portfolio-item" id="wordpress">
                         <h2>Wordpress</h2>
@@ -156,6 +182,47 @@
                 });
             });
         });
+
+        // Count up
+        const countUpElements = document.querySelectorAll(".count-up-number");
+
+        function countUp(element) {
+            let count = 0;
+            const target = Number(element.dataset.target);
+
+            function increment() {
+                count++;
+                element.textContent = count;
+
+                if (count === target) {
+                    clearInterval(intervalId);
+                }
+            }
+
+            const intervalId = setInterval(increment, 50);
+        }
+
+        // Only start the animation when the element is in view
+        const options = {
+            root: null, // viewport
+            rootMargin: "0px",
+            threshold: 1.0
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    countUp(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, options);
+
+        countUpElements.forEach(element => {
+            observer.observe(element);
+        });
+
+
 
 
 
