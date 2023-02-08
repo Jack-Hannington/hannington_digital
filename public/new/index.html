@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hannington Digtial's website">
     <title>Home</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,18 +30,18 @@
                 <span class="iconify" data-icon="ri:apps-line"></span>
                 Apps
             </a>
-            <a class="nav-item">
+            <a href="/tips" class="nav-item">
                 <span class="iconify" data-icon="material-symbols:tips-and-updates"></span>
                 Tips
             </a>
-            <a class="nav-item">
+            <a href="/contact" class="nav-item">
                 <span class="iconify" data-icon="material-symbols:person-pin-rounded"></span>
                 Contact
             </a>
         </nav>
     </div>
     <header>
-        <img loading="lazy" alt="square grid background" class="background-image"
+        <img rel="preload"  alt="square grid background" class="background-image"
             src="https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg"
             style="object-fit:cover;position: absolute;">
         <div class="section-content">
@@ -67,6 +68,8 @@
                         <li class="portfolio-links" data-portfolio="wordpress">Wordpress dev</li>
                         <li class="portfolio-links" id="tracking-app" data-portfolio="tracker">Live tracking app</li>
                         <li class="portfolio-links" data-portfolio="roll">Roll or hold game</li>
+                        <li class="portfolio-links" data-portfolio="price">Price monitoring app</li>
+                        <li class="portfolio-links" data-portfolio="delivery">Delivery API</li>
                     </ul>
                 </div>
                 <div class="portfolio-content">
@@ -77,37 +80,42 @@
                             direction of the company. Using <a href="#">Dawn</a> as a base and Shopify's new
                             sections anywhere architecture I created a custom theme to match their designs.</p>
                         <div class="portfolio-image-holster">
-                            <img class="portfolio-image" loading="lazy"
+                            <img class="portfolio-image" loading="lazy" width="340" height="279"
                                 src="https://res.cloudinary.com/db2okldfm/image/upload/v1675373459/Hannington%20Digital/INCUS_home_lqxgnd.webp"
                                 alt="INCUS Performance Shopify home page">
-                            <img id="port-image" class="portfolio-image" loading="lazy"
+
+                            <img id="port-image" class="portfolio-image" loading="lazy" width="340" height="279"
                                 src="https://res.cloudinary.com/db2okldfm/image/upload/v1675374267/Hannington%20Digital/INCUS_device_shot_noia5b.webp"
                                 alt="INCUS Performance Shopify live device page">
                         </div>
-
-                        <h3>Performance and accessibility</h3>
-                        <p>The redesign created greater emphasis on purchasing, a refined menu and greatly improved performance, SEO and accessibility metrics from Google Lighthouse reports. </p>
+                        <p>Bespoke heavily customisable sections to give the merchant greater flexibility. </p>
+                        <video style="max-width:100%;" class="portfolio-image"  type="video/mp4" muted autoplay loop src="https://res.cloudinary.com/db2okldfm/video/upload/v1675886762/Hannington%20Digital/INCUS_section_recording_yvk5wb.mp4" loading="lazy"></video>
+                        <!-- <h3>Bespoke customisable sections</h3>
+                        <p>It used Dawn as base but added 10 new sections for the businesss</p>
+                     -->
+                        <h3>Performant and accessible</h3>
+                        <p>The new store greatly improved performance, SEO and accessibility metrics from Google Lighthouse reports. </p>
                         <div class="lighthouse-container">
-                        <div class="count-up">
-                            <span class="count-up-number" data-target="96"></span>
-                            <span class="count-up-text">SEO</span>
+                            <div class="count-up">
+                                <span class="count-up-number" data-target="96"></span>
+                                <span class="count-up-text">PERF</span>
+                            </div>
+                            <div class="count-up">
+                                <span class="count-up-number" data-target="95"></span>
+                                <span class="count-up-text">A11Y</span>
+                            </div>
+                            <div class="count-up">
+                                <span class="count-up-number" data-target="100"></span>
+                                <span class="count-up-text">SEO</span>
+                            </div>
                         </div>
-                        <div class="count-up">
-                            <span class="count-up-number" data-target="94"></span>
-                            <span class="count-up-text">A11Y</span>
+                        <div class="portfolio-image-holster">
+                            <img loading="lazy" class="portfolio-image" src="https://res.cloudinary.com/db2okldfm/image/upload/v1675889933/Hannington%20Digital/Old_performance_rafx85.png" alt="INCUS lighthouse scores before" />
+                            <img loading="lazy" class="portfolio-image" src="https://res.cloudinary.com/db2okldfm/image/upload/v1675889934/Hannington%20Digital/New_performance_dvszdl.png" alt="INCUS lighthouse scores after" />
                         </div>
-                        <div class="count-up">
-                            <span class="count-up-number" data-target="99"></span>
-                            <span class="count-up-text">Perf</span>
-                        </div>
-                    </div>
-                    <h3>New customisable sections</h3>
-                    <p>It used Dawn as base but added 10 new sections for the businesss</p>
-                    <p>Insert slider here</p>
                     </div>
                     <div class="content portfolio-item" id="wordpress">
                         <h2>Wordpress</h2>
-                        <a class="page-preview">The task was to do X</a>
                         <h3>New customisable sections</h3>
                         <p>It used Dawn as base but added 10 new sections for the businesss</p>
                         <p>Insert slider here</p>
@@ -116,7 +124,6 @@
                     </div>
                     <div class="content portfolio-item" id="roll">
                         <h2>Roll or hold</h2>
-                        <a class="page-preview">The task was to do X</a>
                         <h3>New customisable sections</h3>
                         <p>It used Dawn as base but added 10 new sections for the businesss</p>
                         <p>Insert slider here</p>
@@ -125,7 +132,6 @@
                     </div>
                     <div class="content portfolio-item" id="tracker">
                         <h2>Live tracker</h2>
-                        <a class="page-preview">The task was to do X</a>
                         <h3>New customisable sections</h3>
                         <p>It used Dawn as base but added 10 new sections for the businesss</p>
                         <p>Insert slider here</p>
@@ -223,7 +229,7 @@
         });
 
 
-
+        Cocoen.create(document.querySelector('.cocoen'));
 
 
 

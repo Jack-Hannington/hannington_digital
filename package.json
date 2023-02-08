@@ -10,6 +10,7 @@
   "author": "Jack Hannington",
   "license": "ISC",
   "dependencies": {
+    "cocoen": "^3.1.1",
     "sergey": "^0.0.13"
   }
 }
