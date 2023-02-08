@@ -2,7 +2,7 @@
   "name": "hannington_digital",
   "version": "1.0.0",
   "description": "Business website for Hannington Digital",
-  "main": "index.js",
+  "main": "new.js",
   "scripts": {
     "start": "sergey",
     "dev": "sergey --watch"
