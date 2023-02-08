@@ -6,6 +6,7 @@
   --highlight: #71ADCD;
   --blue-graident: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
   --green: #96B15B;
+  --dark-blue: #060B23;
   font-size: 16px;
 }
 
@@ -14,7 +15,7 @@ html {
 }
 
 body {
-  background-color: #060B23;
+  background-color: var(--dark-blue);
   font-family: Inter;
   color:#cecece;
   height: 2000px;
@@ -29,7 +30,6 @@ h1, h2, h3, h4 {
 
 h1 {
   margin-bottom: 12px;
-  font-size: 28px;
 }
 
 h2 {
@@ -57,6 +57,14 @@ a {
   color:inherit;
 }
 
+a:hover {
+color:var(--highlight);
+}
+
+.link {
+color:var(--highlight);
+}
+
 button, span, input, label {
   font-family: inherit;
   font-size: inherit;
@@ -71,10 +79,45 @@ button {
 
 }
 
+/* Images */
+
 img {
   max-width: 100%;
-  display: block;
+  display: inline-block;
 }
+
+.logo img {
+width: 120px;
+}
+
+
+.background-image {
+object-fit: cover;
+position: absolute;
+right: 0;
+height: 500px;
+top: 0;
+z-index: -1;
+}
+
+.portfolio-image-holster{
+padding:20px 0px;
+display: flex;
+gap:20px;
+scroll-snap-type: x mandatory;
+overflow-x: auto;
+white-space: nowrap;
+}
+
+.portfolio-image {
+scroll-snap-align: start;
+width:340px;
+border-radius: 2px;
+transition: all 2s;
+}
+
+
+/* NAV */
 
 .nav-wrapper {
   display: flex;
@@ -84,9 +127,6 @@ img {
 }
 
 
-.logo img {
-  width: 120px;
-}
 
 .logo-written {
   font-size: 16px;
@@ -98,14 +138,15 @@ img {
 
 
 .primary-button {
-  
+  transition: all 1s;
+  background-color: inherit;
   background: linear-gradient(180deg, #1431d1 0%, #0C0D11 100%);
   color: #ebebeb;
 }
 
 .primary-button:hover {
   color: #fff;
-  background: linear-gradient(177.39deg, rgba(0, 41, 255, 0.249) 2.18%, rgba(34, 60, 188, 0) 119.23%);
+  background: #1431d1;
   transition: all 1s;
 }
 
@@ -173,25 +214,28 @@ nav {
 .section-tag {
   font-weight: 500;
   font-size: 14px;
+  font-family: Lexend;
 }
 
 /* Header */
 
 header {
-  background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg');
-  padding-top:20px;
+  /* background-image:url('https://res.cloudinary.com/db2okldfm/image/upload/v1674988919/Hannington%20Digital/Grid_bg_fvwdpy.svg'); */
   background-position: right;
   background-repeat: no-repeat;
   padding-bottom: 60px;
 }
+
+
 
 header button {
   margin-top: 20px;
   margin-right: 20px;
 }
 .header-content {
-  max-width: 600px;
+  max-width: 670px;
 }
+
 
 
 /* Media queries  */
@@ -218,33 +262,38 @@ header button {
       padding:0px 16px;
       margin:auto;
   }
+  .portfolio-sidebar {
+    height: 60%;
+  }
   
 }
 
-
 /* Portfolio styles */
-
 
 #portfolio {
   border-top:1px solid #2C3044;
   border-bottom: 1px solid #2C3044;
+  min-height: 1400px;
 }
 
 #portfolio > .section-content {
   padding-top:0px;
   padding-bottom:0px;
+  height:100%;
 }
 
 .portfolio {
   display:flex;
   width:100%;
-  height:800px;
+  height:100%;
 }
 
 .portfolio-sidebar {
   width:25%;
-  border-right: 1px solid #373737;
+  background-color: var(--dark-blue);
   padding: 40px 0px;
+  position: sticky;
+  top:0;
 }
 
 .portfolio-sidebar h2 {
@@ -255,8 +304,13 @@ header button {
   position:relative;
   width:75%;
   max-width:100%;
-  height:800px;
+  height:1400px;
   padding: 40px 40px;
+  border-left: 1px solid #2C3044;
+}
+
+.portfolio-content h3 {
+  margin-top:40px;
 }
 .portfolio-item {
   position:absolute;
@@ -269,10 +323,6 @@ header button {
   padding: 5px 0px;
   color:#a5a5a5;
 }
-
-
-
-
 
 .portfolio-links:hover {
   transform:translateX(5%);
@@ -293,8 +343,14 @@ header button {
 }
 
 
+.portfolio-item > video {
+  width:700px;
+  margin-top:0px;
+  max-width: 100%;
+}
+
 .show {
-    animation:slidein 0.4s;
+  animation:slidein 0.4s;
   display:block;
   opacity:1;
 }
@@ -375,6 +431,40 @@ li::before {
   }
 }
 
+
+/* Lighthouse */
+
+.lighthouse-container {
+ margin-top:20px;
+ width:300px;
+ max-width: 100%;
+ display: flex;
+ gap:20px;
+}
+
+.count-up {
+  font-weight: 500;
+  text-align: center;
+  width: 70px;
+  height: 70px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 100%;
+  border: 4px solid green;
+  padding: 4px;
+  align-items: center;
+}
+
+.count-up-text {
+  font-size: 10px;
+  text-transform: uppercase;
+}
+
+.count-up-number {
+  font-size: 20px;
+}
+
 @media (max-width:800px){
   .portfolio {
     flex-direction:column;
@@ -382,11 +472,17 @@ li::before {
   .portfolio-content {
     width:100%;
     padding:10px 0px;
+    border-left:none;
   }
   .portfolio-sidebar {
     width:100%;
-    border:none;
-    padding:10px 0px;
+    padding:0px 0px;
+    z-index: 1;
+    position: relative;
+  }
+  .portfolio-links{
+    padding-bottom: 10px;
+    border-bottom:2px solid transparent;
   }
   .portfolio-sidebar ul {
     /* padding-inline-start:10px; */
@@ -403,6 +499,7 @@ li::before {
   }
   .active-link {
       transform:translateX(0%);
+      border-bottom:2px solid #1431d1;
   }
   .active-link:hover {
       transform:translateX(0%);
@@ -412,6 +509,9 @@ li::before {
   }
   .portfolio-sidebar h2 {
       display: none;
+  }
+  .background-image {
+    opacity: 0.6;
   }
 }
 
