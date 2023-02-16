@@ -1,63 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tips</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend&display=swap" rel="stylesheet">
-    <link href="styles.css" type="text/css" rel="stylesheet">
-    <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
-
-</head>
-
-<body>
-    <div class="nav-wrapper">
-        <div class="logo">
-            <span class="logo-written">Hannington Digital</span>
-        </div>
-        <nav>
-            <a href="/new" class="nav-item">
-                <span class="iconify" data-icon="heroicons:home-solid"></span>
-                Home
-            </a>
-            <a href="/apps" class="nav-item">
-                <span class="iconify" data-icon="ri:apps-line"></span>
-                Apps
-            </a>
-            <a href="/tips" class="nav-item">
-                <span class="iconify" data-icon="material-symbols:tips-and-updates"></span>
-                Tips
-            </a>
-            <a href="/contact" class="nav-item">
-                <span class="iconify" data-icon="material-symbols:person-pin-rounded"></span>
-                Contact
-            </a>
-        </nav>
-</div>
+<sergey-import src="header" />
     <header>
         <div class="section-content">
             <h1>Tips</h1>
-            <p>Tip content</p>
-            <button class="primary-button">Get in touch</button>
         </div>
     </header>
     <section id="portfolio">
 
     </section>
-    <script>
-        //Active page
-        const navItems = Array.from(document.querySelectorAll('.nav-item'));
-        for (let item of navItems) {
-            if (document.title === item.textContent.trim()) {
-                item.classList.add('active')
-            }
-        }
-    </script>
-
-</body>
-
-</html>
+<sergey-import src="footer" />

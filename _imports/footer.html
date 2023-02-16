@@ -1,3 +1,12 @@
-
+<script>
+        //Active page
+        const navItems = Array.from(document.querySelectorAll('.nav-item'));
+        for (let item of navItems) {
+            if (document.title === item.textContent.trim()) {
+                item.classList.add('active')
+            }
+        }
+    </script>
 </body>
+
 </html>

@@ -21,7 +21,7 @@
             <span class="logo-written">Hannington Digital</span>
         </div>
         <nav>
-            <a href="/new" class="nav-item">
+            <a href="/" class="nav-item">
                 <span class="iconify" data-icon="heroicons:home-solid"></span>
                 Home
             </a>
@@ -80,8 +80,17 @@
             </div>
 </section>
 
-
+<script>
+        //Active page
+        const navItems = Array.from(document.querySelectorAll('.nav-item'));
+        for (let item of navItems) {
+            if (document.title === item.textContent.trim()) {
+                item.classList.add('active')
+            }
+        }
+    </script>
 </body>
+
 </html>
 
 

@@ -22,7 +22,7 @@
             <span class="logo-written">Hannington Digital</span>
         </div>
         <nav>
-            <a href="/new" class="nav-item">
+            <a href="/" class="nav-item">
                 <span class="iconify" data-icon="heroicons:home-solid"></span>
                 Home
             </a>
@@ -68,7 +68,6 @@
                         <li class="portfolio-links" id="tracking-app" data-portfolio="tracker">Live tracking app</li>
                         <li class="portfolio-links" data-portfolio="roll">Roll or hold game</li>
                         <li class="portfolio-links" data-portfolio="price">Price monitoring app</li>
-                        <li class="portfolio-links" data-portfolio="delivery">Delivery API</li>
                         <li class="portfolio-links" data-portfolio="delivery">Fan engagement game</li>
                     </ul>
                 </div>
@@ -232,6 +231,15 @@
 
 </body>
 
-
+<script>
+        //Active page
+        const navItems = Array.from(document.querySelectorAll('.nav-item'));
+        for (let item of navItems) {
+            if (document.title === item.textContent.trim()) {
+                item.classList.add('active')
+            }
+        }
+    </script>
 </body>
+
 </html>
