@@ -117,17 +117,7 @@ img {
   transition: all 1s;
 }
 
-.portfolio-image:hover {
-  box-shadow: rgba(0, 0, 255, 0.3) 0px 7px 29px 0px;
-  transform:scale(1.2);
-  margin-left:20px;
-  z-index:1;
-}
 
-.portfolio-image:nth-of-type(1):hover {
-  margin-left:40px;
-  z-index:1;
-}
 
 /* NAV */
 
@@ -279,6 +269,17 @@ header button {
     }
     .portfolio-image-holster {
       overflow:hidden;
+    }
+    .portfolio-image:hover {
+      box-shadow: rgba(0, 0, 255, 0.3) 0px 7px 29px 0px;
+      transform:scale(1.2);
+      margin-left:20px;
+      z-index:1;
+    }
+    
+    .portfolio-image:nth-of-type(1):hover {
+      margin-left:40px;
+      z-index:1;
     }
     
 }
