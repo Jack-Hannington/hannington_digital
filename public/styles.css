@@ -25,7 +25,7 @@ body {
 
 h1, h2, h3, h4 {
     font-weight: 500;
-    color:rgb(244, 244, 244);
+    color:rgb(230, 230, 230);
     font-family: Lexend;
 }
 
@@ -56,11 +56,13 @@ a, button {
 a {
     text-decoration: none;
     color:inherit;
+
 }
 
-a:hover {
+header a {
   color:var(--highlight);
 }
+
 
 .link {
   color:var(--highlight);
@@ -388,7 +390,7 @@ header button {
 
   li::before {
      content: "";
-     width: 40px;
+     width: 30px;
      height: 1px;
      background-color:white;
      display: block;
@@ -528,6 +530,7 @@ header button {
     }
     .background-image {
       opacity: 0.6;
+      display: none;
     }
   }
 
