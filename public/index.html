@@ -18,7 +18,9 @@
 <body>
     <div class="nav-wrapper">
         <div class="logo">
-            <span class="logo-written">Hannington Digital</span>
+            <!-- <span class="logo-written">Hannington Digital</span> -->
+            <a class="social-links"><span class="iconify" data-icon="uit:linkedin-alt"></span></a>
+            <a class="social-links"><span class="iconify" data-icon="mdi:github"></span></a>
         </div>
         <nav>
             <a href="/" class="nav-item">
@@ -45,7 +47,7 @@
         style="object-fit:cover;position: absolute;">
     <div class="section-content">
         <div class="header-content">
-            <h1>This site is still under development.</h1>
+            <h1>Hannington Digital</h1>
             <p>Please explore some of my projects below - while there may be some overlap, the majority of these were built outside of my day-to-day job as <a class="highlight" href="/contact"></a>Head of E-commerce</a>. 
             </p>
             <a href="#portfolio"><button class="primary-button">Explore work</button></a> <a href="/apps">Get in
@@ -71,7 +73,7 @@
                 <div class="content portfolio-item show" id="shopify">
                     <span class="section-tag green">Shopify</span>
                     <h2>Custom theme development</h2>
-                    <p> I used Shopify's new 'sections anywhere' theme architecture to create a sleek, interactive, and customisable online store that aligned with the design vision of INCUS, a company specialising in smart wearables for triathletes.</p>
+                    <p> I used Shopify's new 2.0 theme architecture to create a sleek and customisable online store that matched the designs provided by INCUS, a company specialising in smart wearables for triathletes.</p>
                     <div class="portfolio-image-holster">
                         <img class="portfolio-image" loading="lazy" width="340" height="191"
                             src="https://res.cloudinary.com/db2okldfm/image/upload/v1676567120/Hannington%20Digital/Home%20page/INCUS_home_1600x900_1_qqab0h.webp"
@@ -82,8 +84,7 @@
                             alt="INCUS Performance device">
                     </div>
                     <h3>126% increase in organic traffic</h3>
-                    <p>A content strategy to target profitable search queries in the triathlon market was created for INCUS. </p>
-                    <p>As of January 2023, 7 of the top 10 traffic-generating pages came blog posts, and the company had earned in-market featured snippets on Google.</p>
+                    <p>An SEO strategy to target profitable search queries in the triathlon market was created for INCUS. As of January 2023, seven of the top ten traffic-generating pages came blog posts, and the company had earned in-market featured snippets on Google.</p>
                     <div class="portfolio-image-holster">
                         <img class="portfolio-image" loading="lazy" width="340" height="191"
                             src="https://res.cloudinary.com/db2okldfm/image/upload/v1676567519/Hannington%20Digital/Home%20page/Ahrefs_organic_traffic_growth_d6odvd.webp"
@@ -93,7 +94,6 @@
                             src="https://res.cloudinary.com/db2okldfm/image/upload/v1676567624/Hannington%20Digital/Home%20page/INCUS_buyers_guide_800x450_1_yncrop.webp"
                             alt="Buyers guide Google snippet">
                     </div>
-
                     <h3>Performance improvements</h3>
                     <p>The redesigned store significantly enhanced its performance, SEO, and accessibility metrics, as reported by Google Lighthouse.</p>
                     <!-- <div class="lighthouse-container">
@@ -168,13 +168,7 @@
     </div>
 </section>
 <script>
-    //Active page
-    const navItems = Array.from(document.querySelectorAll('.nav-item'));
-    for (let item of navItems) {
-        if (document.title === item.textContent.trim()) {
-            item.classList.add('active')
-        }
-    }
+
     //Portfolio animations
     const allPortfolioLinks = document.querySelectorAll('.portfolio-links');
     const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));

@@ -139,6 +139,18 @@ img {
     color:#cacaca;
 }
 
+.social-links {
+  border:1px solid #8e8e8e;
+  padding:8px 12px;
+  border-radius: 6px;
+  background-color: var(--dark-blue);
+  transition: 0.5s;
+}
+
+.social-links:hover {
+  filter:invert(100%)
+}
+
 
 
 .primary-button {
@@ -161,11 +173,11 @@ nav {
     display: flex;
     width:100%;
     margin:auto;
-    position: fixed;
+    /* position: fixed; */
     top: auto;
     bottom:0;
     left: 50%;
-    transform: translate(-50%);
+    /* transform: translate(-50%); */
     z-index: 1;
   
 }
@@ -486,6 +498,9 @@ header button {
   @media (max-width:800px){
     .portfolio {
       flex-direction:column;
+    }
+    .social-links {
+      display:none;
     }
     .portfolio-content {
       width:100%;
