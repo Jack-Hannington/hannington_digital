@@ -171,13 +171,13 @@ nav {
     border-radius: 4px;
     padding:12px 0px;
     display: flex;
-    width:100%;
+    width:94%;
     margin:auto;
-    /* position: fixed; */
+    position: fixed;
     top: auto;
-    bottom:0;
+    bottom:10px;
     left: 50%;
-    /* transform: translate(-50%); */
+    transform: translate(-50%);
     z-index: 1;
   
 }
@@ -213,6 +213,10 @@ nav {
     color: var(--green);
 }
 
+.lightblue {
+    color:var(--highlight)
+}
+
 .green-bg {
     background-color: var(--green);
 }
@@ -228,7 +232,7 @@ nav {
 
 .section-tag {
     font-weight: 500;
-    font-size: 14px;
+    font-size: 16px;
     font-family: Lexend;
 }
 
@@ -249,6 +253,11 @@ header button {
 }
 .header-content {
     max-width: 670px;
+}
+
+.header-content p {
+  font-size: 18px;
+  line-height: 26px;
 }
 
 
@@ -498,6 +507,12 @@ header button {
   @media (max-width:800px){
     .portfolio {
       flex-direction:column;
+    }
+    .nav-item {
+      font-size: 14px;
+    }
+    .nav-item > .iconify {
+      font-size: 20px;
     }
     .social-links {
       display:none;

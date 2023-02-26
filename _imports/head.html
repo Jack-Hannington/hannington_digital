@@ -1,26 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Hannington Digtial's website">
-    <title>Contact</title>
+    <sergey-slot />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lexend&display=swap"
         rel="stylesheet">
-    <link href="styles.css" type="text/css" rel="stylesheet">
     <script defer src="https://code.iconify.design/3/3.0.0/iconify.min.js"></script>
+    <link href="/assets/css/styles.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
     <div class="nav-wrapper">
         <div class="logo">
-            <!-- <span class="logo-written">Hannington Digital</span> -->
-            <a class="social-links"><span class="iconify" data-icon="uit:linkedin-alt"></span></a>
-            <a class="social-links"><span class="iconify" data-icon="mdi:github"></span></a>
+            <span class="logo-written">Hannington Digital</span>
         </div>
         <nav>
             <a href="/" class="nav-item">
@@ -35,29 +32,9 @@
                 <span class="iconify" data-icon="material-symbols:tips-and-updates"></span>
                 Blog
             </a>
-            <a href="/contact" class="nav-item">
+            <a href="/about" class="nav-item">
                 <span class="iconify" data-icon="material-symbols:person-pin-rounded"></span>
-                Contact
+                About
             </a>
         </nav>
     </div>
-    <header>
-        <div class="section-content">
-            <h1>Contact</h1>
-        </div>
-    </header>
-    <section id="portfolio">
-
-    </section>
-<script>
-        //Active page
-        const navItems = Array.from(document.querySelectorAll('.nav-item'));
-        for (let item of navItems) {
-            if (document.title === item.textContent.trim()) {
-                item.classList.add('active')
-            }
-        }
-    </script>
-</body>
-
-</html>
