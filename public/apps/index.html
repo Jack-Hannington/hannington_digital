@@ -54,6 +54,35 @@
                 item.classList.add('active')
             }
         }
+            //Portfolio animations
+    const allPortfolioLinks = document.querySelectorAll('.portfolio-links');
+    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
+
+
+    allPortfolioLinks.forEach(link => {
+        link.addEventListener('click', (event) => {
+            event.preventDefault();
+            const clickedLink = event.target;
+
+            // Remove active link class from all links
+            allPortfolioLinks.forEach(otherLink => {
+                otherLink.classList.remove('active-link');
+            });
+
+            // Add active link class to clicked link
+            clickedLink.classList.add('active-link');
+
+            // Hide all portfolio items except the one corresponding to the clicked link
+            portfolioItems.filter(item => item.id !== clickedLink.dataset.portfolio).forEach(item => {
+                item.classList.add('hide');
+            });
+
+            // Show the portfolio item corresponding to the clicked link
+            const targetItem = document.getElementById(clickedLink.dataset.portfolio);
+            targetItem.classList.remove('hide');
+            targetItem.classList.add('show');
+        });
+    });
     </script>
 </body>
 

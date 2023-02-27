@@ -7,7 +7,8 @@
         style="object-fit:cover;position: absolute;">
     <div class="section-content">
         <div class="header-content">
-            <p>Explore some of my web development projects below - while there may be some overlap, the majority of these were built outside of my day-to-day job as <a class="highlight" href="/about"></a> Head of
+            <h1>Jack Hannington</h1>
+            <p>Please explore some of my web development projects below - while there may be some overlap, the majority of these were built outside of my day-to-day job as<a class="highlight" href="/about"></a> Head of
                 Ecommerce at Appliance World</a>.
             </p>
             <a href="#portfolio"><button class="primary-button">Explore work</button></a> <a href="/about">About</a>
@@ -18,7 +19,7 @@
     <div class="section-content">
         <div class="portfolio">
             <div class="portfolio-sidebar">
-                <h2>Portfolio</h2>
+                <h2>Projects</h2>
                 <ul>
                     <li class="portfolio-links active-link" data-portfolio="shopify">Shopify development</li>
                     <li class="portfolio-links" data-portfolio="wordpress">Bespoke physio website</li>
@@ -146,35 +147,7 @@
 </section>
 <script>
 
-    //Portfolio animations
-    const allPortfolioLinks = document.querySelectorAll('.portfolio-links');
-    const portfolioItems = Array.from(document.querySelectorAll('.portfolio-item'));
 
-
-    allPortfolioLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const clickedLink = event.target;
-
-            // Remove active link class from all links
-            allPortfolioLinks.forEach(otherLink => {
-                otherLink.classList.remove('active-link');
-            });
-
-            // Add active link class to clicked link
-            clickedLink.classList.add('active-link');
-
-            // Hide all portfolio items except the one corresponding to the clicked link
-            portfolioItems.filter(item => item.id !== clickedLink.dataset.portfolio).forEach(item => {
-                item.classList.add('hide');
-            });
-
-            // Show the portfolio item corresponding to the clicked link
-            const targetItem = document.getElementById(clickedLink.dataset.portfolio);
-            targetItem.classList.remove('hide');
-            targetItem.classList.add('show');
-        });
-    });
 
     // Count up
     const countUpElements = document.querySelectorAll(".count-up-number");
