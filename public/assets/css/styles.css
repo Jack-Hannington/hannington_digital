@@ -3,7 +3,7 @@
 }
 
 :root {
-    --highlight: #71ADCD;
+    --highlight: #35B5EF;
     --blue-graident: linear-gradient(180deg, #0B1446 0%, #0C0D11 100%);
     --green: #96B15B;
     --dark-blue: #060B23;
@@ -77,7 +77,7 @@ button {
     border:none;
     background:white;
     color:black;
-    border-radius: 20px;
+    border-radius: 4px;
     padding:10px 20px;
 
 }
@@ -136,7 +136,7 @@ img {
     font-size: 16px;
     font-weight: 400;
     font-family: Lexend;
-    color:#cacaca;
+    color:#ededed;
 }
 
 .social-links {
@@ -156,13 +156,19 @@ img {
 .primary-button {
     transition: all 1s;
     background-color: inherit;
-    background: linear-gradient(180deg, #1431d1 0%, #0C0D11 100%);
+    
+    background: #1431d1;
     color: #ebebeb;
+}
+
+.unstyled-button {
+  background-color: transparent;
+  color:#fff;
 }
 
 .primary-button:hover {
     color: #fff;
-    background: #1431d1;
+    background: linear-gradient(180deg, #1431d1 10%, #222c4f 100%);
     transition: all 1s;
 }
 
@@ -389,13 +395,13 @@ header button {
   }
   
   .show {
-    animation:slidein 0.4s;
+    animation:fadein 0.4s;
     display:block;
     opacity:1;
   }
   
   .hide {
-    animation:slideout 0.4s;
+    animation:fadeout 0.4s;
     opacity:0;
   }
   
@@ -509,10 +515,10 @@ header button {
       flex-direction:column;
     }
     .nav-item {
-      font-size: 14px;
+      font-size: 16px;
     }
     .nav-item > .iconify {
-      font-size: 20px;
+      font-size: 22px;
     }
     .social-links {
       display:none;
