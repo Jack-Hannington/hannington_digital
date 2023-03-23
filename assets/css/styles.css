@@ -139,6 +139,11 @@ img {
 }
 
 
+/* Coliumns */
+
+.col-50 {
+  width:50%;
+}
 
 /* NAV */
 
@@ -286,6 +291,28 @@ header button {
   font-size: 18px;
   line-height: 26px;
 }
+
+
+/* Forms */
+.contact-section {
+  display: flex;
+}
+
+label {
+  display: block;
+  margin-top: 16px;
+  margin-bottom:4px;
+}
+
+input, textarea {
+  border-radius: 4px;  
+  padding:10px;
+}
+
+button[type="submit"] {
+  margin-top: 20px;
+}
+
 
 
 
@@ -629,6 +656,9 @@ header button {
     .background-image {
       opacity: 0.3;
       /* display: none; */
+    }
+    .col-50 {
+      width:100%;
     }
   }
 
