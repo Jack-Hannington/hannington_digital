@@ -47,7 +47,7 @@
             <h1>About me</h1>
             <!-- Apps and tools I use. Mention Strava -->
             <p>I'm currently the Head of ecommerce at Appliance World and a freelance web developer. Outside of work I took up running in 2020 and ended up in the top 13% of athletes on Strava in 2022 with over 1000km covered. </p>
-            <h3>Apps, tools and languages that I use</h3>
+            <!-- <h3>Apps, tools and languages that I use</h3> -->
             <!-- <div class="carousel mt-2">
                 <span class="iconify" data-icon="logos:shopify"></span>
                 <span class="iconify" data-icon="logos:mailchimp-freddie"></span>
@@ -120,13 +120,18 @@
         <p>Interested in working with me or have any questions about the projects you've seen on this site? Please complete the contact form and I'll respond within 24 hours.</p>
     </div>
     <div class="col-50">
-        <form id="contact-form">
+        <form id="contact-form" netlify method="POST" action="/success">
             <label for="name">Name</label>
             <input type="text" id="name" name="name">
             <label for="email">Email</label>
             <input type="email" id="email" name="email">
             <label for ="message">Message</label>
             <textarea id="message" name="message"></textarea>
+            <p class="hidden">
+                <label>
+                  Don’t fill this out if you’re human: <input name="bot-field" />
+                </label>
+              </p>
             <button class="primary-button" type="submit">Submit</button>
         </form>
     </div>
