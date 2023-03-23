@@ -68,7 +68,7 @@ header a {
   color:var(--highlight);
 }
 
-button, span, input, label {
+button, span, input, label, textarea {
     font-family: inherit;
     font-size: inherit;
 }
@@ -296,12 +296,17 @@ header button {
 /* Forms */
 .contact-section {
   display: flex;
+  flex-wrap:wrap;
 }
 
 label {
   display: block;
   margin-top: 16px;
   margin-bottom:4px;
+}
+
+#contact-form > input, textarea {
+  width: 100%;
 }
 
 input, textarea {
@@ -329,6 +334,9 @@ button[type="submit"] {
         margin: 0px;
         background: none;
         width:400px;
+    }
+    #contact-form {
+     padding-left:20px;
     }
     .nav-contact {
         display: none;
